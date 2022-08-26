@@ -31,6 +31,7 @@ export default function Navbar() {
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
+              
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-sky-200
@@ -171,7 +172,7 @@ export default function Navbar() {
 
   
 
-          {/* navigation phone start */}
+          {/* navigation list (phone) start */}
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
@@ -190,7 +191,7 @@ export default function Navbar() {
               ))}
             </div>
           </Disclosure.Panel>
-          {/* nabigation phone end  */}
+          {/* nabigation list (phone) end  */}
           
         </>
       )}
