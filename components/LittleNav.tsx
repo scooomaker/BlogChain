@@ -19,16 +19,16 @@ const profileImg = '/images/sea1.png'
 function LittleNav() {
   return (
     <>
-      <Disclosure as="nav" className="bg-stone-50 shadow-2xl">
+      <Disclosure as="nav" className="bg-stone-50 shadow-md">
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
 
               {/* main  */}
-              <div className="relative flex items-center justify-between h-16">
+              <div className="relative flex flex-row items-center justify-between h-16">
 
                 {/* img  */}
-                <div className='h-[150px] w-[150px] flex-1 flex justify-center '>
+                <div className='h-48 w-48 flex-1 flex justify-start z-30'>
                   <img className="imaged shadow-2xl" src={profileImg} />
                   {/* <img className="rounded-full ring-2 -translate-y-6 " src={profileImg} /> */}
                   {/* I don't know how to uses tailwind to solve this problem, so I use the base css. */}
