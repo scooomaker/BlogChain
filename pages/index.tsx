@@ -15,6 +15,10 @@ const Home: NextPage = () => {
       <div className='bg-fixed bg-cover bg-no-repeat bg-right-top h-96' style={{ backgroundImage: `url(${bgImg})` }}></div>
 
       <LittleNav />
+
+      <div className='bg-slate-200 h-[10000px]'>
+
+      </div>
     </>
 
   )

@@ -6,6 +6,7 @@
     .imaged{
       border-radius: 9999px;
       transform: translateY(-1.5rem);
+      z-index: 30;
     }
     @media (max-width: 800px) {
       .imaged{
