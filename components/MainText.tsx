@@ -5,9 +5,9 @@ function Main() {
         <>
             <div className="flex flex-row">
                 {/* left lan  */}
-                <div className="basis-4/12 pl-36 pt-16 pr-5 font-sans">
+                <div className="basis-4/12 pl-36 pt-16 pr-10 font-sans">
                     <div>
-                        <div className='text-5xl pb-1'>FengXiao</div>
+                        <div className='text-5xl pb-1 font-medium'>FengXiao</div>
                         <p className='font-serif text-xl'>@scooomaker</p>
 
                         <br />
@@ -63,8 +63,8 @@ function Main() {
                         </div>
                     </div>
 
-                    <div className=''>
-
+                    <div>
+                        
                     </div>
                 </div>
 
