@@ -25,7 +25,8 @@ const profile_img = '/images/sea1.png'
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-stone-50">
+
+    <Disclosure as="nav" className="bg-stone-50 sticky top-0">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -193,6 +194,7 @@ export default function Navbar() {
           
         </>
       )}
-    </Disclosure>
+      </Disclosure>
+    
   )
 }
