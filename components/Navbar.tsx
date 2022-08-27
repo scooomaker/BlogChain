@@ -1,5 +1,3 @@
-// 70 add func
-
 
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
@@ -29,12 +27,14 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-stone-50 sticky top-0 z-40">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto px-2">
             <div className="relative flex items-center justify-between h-16">
               
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center">
+
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-sky-200
+                <div className='invisible sm:visible'>
+                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-sky-200
                  focus:outline-none focus:ring-2 focus:ring-inset focus: ring-slate-50">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -43,10 +43,12 @@ export default function Navbar() {
                     <MenuIcon className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
+                </div>
+                
               </div>
 
               
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex-1 flex items-center justify-start m-12 sm:hidden">
 
                 {/* image here */}
                 <div className="flex-shrink-0 flex items-center">
@@ -65,7 +67,7 @@ export default function Navbar() {
 
 
                 {/* add the navigation item */}
-                <div className="hidden sm:block sm:ml-6">
+                <div className="">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <>
@@ -92,7 +94,7 @@ export default function Navbar() {
               </div>
 
 
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 ">
 
               {/* View notifications button start */}
                 <button
@@ -173,7 +175,7 @@ export default function Navbar() {
   
 
           {/* navigation list (phone) start */}
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Disclosure.Button
