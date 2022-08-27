@@ -1,11 +1,15 @@
 import React from 'react'
 
+const profileImg = '/images/sea1.png'
+
 function Main() {
     return (
         <>
-            <div className="flex flex-row subpixel-antialiased lg:hidden">
+            <div className="flex flex-row subpixel-antialiased xl:hidden">
                 {/* left lan  */}
                 <div className="basis-4/12 pl-36 pt-16 pr-10 font-sans">
+                    
+
                     <div>
                         <div className='text-5xl pb-1 font-medium'>FengXiao</div>
                         <p className='font-serif text-xl'>@scooomaker</p>
@@ -18,7 +22,7 @@ function Main() {
 
                     </div>
                 </div>
-                
+
                 {/* center lan  */}
                 <div className="basis-5/12 mt-3 bg-stone-50 shadow-xl rounded-lg">
                     <div className="grid grid-cols-1 divide-y-8">
@@ -34,10 +38,10 @@ function Main() {
                             <h1 className='text-3xl truncate'>Hello World Hello WorldHello WorldHello WorldHello World</h1>
                             <div className='font-serif truncate'>May 26</div>
                             <hr />
-                            <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'> 
+                            <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'>
                                 Next.js also has support for Image Optimization by default. This allows for resizing, optimizing, and serving images in modern formats like WebP when the browser supports it. This avoids shipping large images to devices with a smaller viewport.
                                 Next.js also has support for Image Optimization by default. This allows for resizing, optimizing, and serving images in modern formats like WebP when the browser supports it. This avoids shipping large images to devices with a smaller viewport.
-                              
+
                             </div>
                         </div>
 
@@ -45,8 +49,8 @@ function Main() {
                             <h1 className='text-3xl truncate'>My Life</h1>
                             <div className='font-serif truncate'>May 24</div>
                             <hr />
-                            <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'> 
-                            Instead of optimizing images at build time, Next.js optimizes images on-demand, as users request them. Unlike static site generators and static-only solutions, your build times aren't increased, whether shipping 10 images or 10 million images.
+                            <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'>
+                                Instead of optimizing images at build time, Next.js optimizes images on-demand, as users request them. Unlike static site generators and static-only solutions, your build times aren't increased, whether shipping 10 images or 10 million images.
                             </div>
                         </div>
 
@@ -67,7 +71,7 @@ function Main() {
                     </div>
 
                     <div>
-                        
+
                     </div>
                 </div>
 

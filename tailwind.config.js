@@ -13,6 +13,9 @@ module.exports = {
       'xl': {'max': '1279px'},
       // => @media (max-width: 1279px) { ... }
 
+      'xlmin': {'min': '1279px'},
+      // => @media (max-width: 1279px) { ... }
+
       'lg': {'max': '1023px'},
       // => @media (max-width: 1023px) { ... }
       '2md':{'max': '963px'},
@@ -22,6 +25,7 @@ module.exports = {
       'sm': { 'max': '639px' },
       'ssm': {'max': '450px'},
       // => @media (max-width: 639px) { ... }
+
     }
   },
   plugins: [],

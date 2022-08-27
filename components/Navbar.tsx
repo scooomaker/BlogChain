@@ -176,7 +176,7 @@ export default function Navbar() {
 
           {/* navigation list (phone) start */}
           <Disclosure.Panel className="absolute">
-            <div className="w-screen h-screen px-2 pt-2 pb-3 space-y-1  z-auto bg-white ">
+            <div className="w-screen h-screen px-2 pt-2 pb-3 space-y-1  z-auto bg-slate-100 ">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -184,7 +184,7 @@ export default function Navbar() {
                   href={item.href}
                   className={classNames(
                     item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
-                    'block px-3 py-2 rounded-md text-base font-medium'
+                    'block px-3 py-2 rounded-md text-base font-medium '
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

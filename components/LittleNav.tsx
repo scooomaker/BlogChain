@@ -26,18 +26,18 @@ const profileImg = '/images/sea1.png'
 function LittleNav() {
   return (
     <>
-      <Disclosure as="nav" className="bg-stone-50 shadow-md">
+      <Disclosure as="nav" className="bg-stone-50 shadow-md ">
         {() => (
           <>
-            <div className="mx-auto px-2 ">
+            {/* > 1279px */}
+            <div className="mx-auto px-2 xl:hidden">
 
               {/* main  */}
               <div className="relative flex flex-row items-center justify-between h-16">
 
                 {/* img  */}
                 <div className='h-48 w-48 flex-1 flex justify-center z-30 sm:hidden'>
-                  <img className="z-30 rounded-full -translate-y-6 shadow-2xl lg:hidden" src={profileImg} />
-                  
+                  <img className="z-30 rounded-full -translate-y-6 shadow-2xl xl:hidden" src={profileImg} />
                 </div>
                 {/* img  */}
 
@@ -70,7 +70,24 @@ function LittleNav() {
               </div>
               {/* main  */}
 
+            </div>
+            {/* > 1279px */}
 
+
+            <div className='xlmin:hidden '>
+              {/* img  */}
+              <div className='w-1/4 justify-center z-30 ml-12'>
+                <img className="z-30 rounded-full -translate-y-1/3 shadow-2xl " src={profileImg} />
+              </div>
+              {/* img  */}
+
+
+              <h1></h1>
+              <h3></h3>
+
+              <p></p>
+
+              <p></p>
             </div>
 
 
