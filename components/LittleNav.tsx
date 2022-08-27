@@ -20,15 +20,15 @@ function LittleNav() {
   return (
     <>
       <Disclosure as="nav" className="bg-stone-50 shadow-md">
-        {({ open }) => (
+        {() => (
           <>
-            <div className="mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="mx-auto px-2 ">
 
               {/* main  */}
               <div className="relative flex flex-row items-center justify-between h-16">
 
                 {/* img  */}
-                <div className='h-48 w-48 flex-1 flex justify-center z-30'>
+                <div className='h-48 w-48 flex-1 flex justify-center z-30 '>
                   <img className="z-30 rounded-full -translate-y-6 shadow-2xl 2md:hidden" src={profileImg} />
                   
                 </div>
