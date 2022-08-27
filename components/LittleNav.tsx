@@ -73,21 +73,45 @@ function LittleNav() {
             </div>
             {/* > 1279px */}
 
-
-            <div className='xlmin:hidden '>
+            {/* mobile phone */}
+            <div className='xlmin:hidden'>
               {/* img  */}
-              <div className='w-1/4 justify-center z-30 ml-12'>
-                <img className="z-30 rounded-full -translate-y-1/3 shadow-2xl " src={profileImg} />
+              <div className='relative'>
+                <div className='absolute  ml-8 -top-9 '>
+                  <img className="w-1/4 rounded-full shadow-2xl z-auto " src={profileImg} />
+                </div>
               </div>
               {/* img  */}
 
+              <div className='h-[255px] z-auto pt-16 pl-5 text-left'>
+                <div className=' text-2xl font-semibold'>Feng Xiao <span className='font-light text-right pl-5'>&</span></div> 
+                <div className='text-sm font-thin '>@scooomaker</div>
+                <br /> <br />
+                <div className='font-light text-sm'>Not followed by anyone you're follwing </div>
+              </div>
 
-              <h1></h1>
-              <h3></h3>
+              {/* add the navigation item */}
+              <div className="items-center justify-center sm:w-auto sm:overflow-auto sm:touch-pan-right sm:justify-start">
+                  <div className="flex mx-3 space-x-1">
+                    {navigation.map((item) => (
+                      <>
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
+                            'px-3 py-2 rounded-md text-sm font-medium'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      </>
+                    ))}
+                  </div>
+                </div>
+                {/* add the navigation item */}
 
-              <p></p>
-
-              <p></p>
             </div>
 
 
