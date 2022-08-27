@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <Navbar />
 
         {/* backgroundImage */}
-        <div className='h-96'>
+        <div className='h-96 md:h-80 sm:h-60 ssm:h-40'>
           <div className='bg-cover bg-no-repeat bg-center h-full' style={{ backgroundImage: `url(${bgImg})` }}>
           </div>
         </div>

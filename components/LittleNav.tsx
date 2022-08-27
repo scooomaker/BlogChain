@@ -6,6 +6,13 @@ const navigation = [
   { name: 'Following', href: '#', current: false },
   { name: 'Followers', href: '#', current: false },
   { name: 'Likes', href: '#', current: false },
+  { name: 'Likes', href: '#', current: false },
+  { name: 'Followers', href: '#', current: false },
+  { name: 'Likes', href: '#', current: false },
+  { name: 'Likes', href: '#', current: false },
+
+
+
 ]
 
 function classNames(...classes: string[]) {
@@ -28,15 +35,15 @@ function LittleNav() {
               <div className="relative flex flex-row items-center justify-between h-16">
 
                 {/* img  */}
-                <div className='h-48 w-48 flex-1 flex justify-center z-30 '>
-                  <img className="z-30 rounded-full -translate-y-6 shadow-2xl 2md:hidden" src={profileImg} />
+                <div className='h-48 w-48 flex-1 flex justify-center z-30 sm:hidden'>
+                  <img className="z-30 rounded-full -translate-y-6 shadow-2xl lg:hidden" src={profileImg} />
                   
                 </div>
                 {/* img  */}
 
                 {/* add the navigation item */}
-                <div className="flex-1 flex items-center justify-center">
-                  <div className="flex space-x-4">
+                <div className="flex-1 flex items-center justify-center sm:w-auto sm:overflow-auto sm:touch-pan-right sm:justify-start">
+                  <div className="flex">
                     {navigation.map((item) => (
                       <>
                         <a
@@ -56,7 +63,7 @@ function LittleNav() {
                 </div>
                 {/* add the navigation item */}
 
-                <div className='flex-1 flex'>
+                <div className='flex-1 flex sm:hidden'>
 
                 </div>
 

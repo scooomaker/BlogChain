@@ -3,7 +3,7 @@ import React from 'react'
 function Main() {
     return (
         <>
-            <div className="flex flex-row subpixel-antialiased">
+            <div className="flex flex-row subpixel-antialiased lg:hidden">
                 {/* left lan  */}
                 <div className="basis-4/12 pl-36 pt-16 pr-10 font-sans">
                     <div>
@@ -23,7 +23,7 @@ function Main() {
                 <div className="basis-5/12 mt-3 bg-stone-50 shadow-xl rounded-lg">
                     <div className="grid grid-cols-1 divide-y-8">
                         {/* A text begin  */}
-                        <div className='text-2xl pt-3 pb-1'>
+                        <div className=' text-2xl pt-3 pb-1'>
                             <span className='px-5 mb-0 pb-0'>Tweets</span>
                             <span className='px-8 mb-0 pb-0'>replies</span>
                             <span className='pl-3 mb-0 pb-0'>Media</span>
