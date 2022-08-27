@@ -3,37 +3,13 @@
 @tailwind utilities;
 
 @layer utilities {
-  .imaged {
-    border-radius: 9999px;
-    transform: translateY(-1.5rem);
-    z-index: 30;
-  }
-
-  @media (max-width: 800px) {
-    .imaged {
-      border-radius: 9999px;
-      display: none;
-    }
-    .LittleNav{
-      display: none;
-    }
-  }
-
+  
   .discript-text {
     overflow: hidden;
-    /* 溢出隐藏 */
     display: -webkit-box;
-    /* 老版弹性盒子，存在浏览器兼容问题，需要添加-webkit，表示内容在水平方向上的排放 */
     -webkit-line-clamp: 4;
-    /* 溢出的行数 */
     -webkit-box-orient: vertical;
   }
-
-
-  @media (max-width: 1100px) {
-    .MainText {
-      display: none;
-    }
-  }
+  
 
 }

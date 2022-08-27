@@ -29,9 +29,8 @@ function LittleNav() {
 
                 {/* img  */}
                 <div className='h-48 w-48 flex-1 flex justify-center z-30'>
-                  <img className="imaged shadow-2xl" src={profileImg} />
-                  {/* <img className="rounded-full ring-2 -translate-y-6 " src={profileImg} /> */}
-                  {/* I don't know how to uses tailwind to solve this problem, so I use the base css. */}
+                  <img className="z-30 rounded-full -translate-y-6 shadow-2xl 2md:hidden" src={profileImg} />
+                  
                 </div>
                 {/* img  */}
 
