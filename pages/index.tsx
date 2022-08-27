@@ -16,13 +16,12 @@ const Home: NextPage = () => {
         <Navbar />
 
         {/* backgroundImage */}
-        <div className='h-full'>
-          {/* <div className=' bg-fixed bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(${bgImg})` }}></div> */}
+        <div className='h-96'>
+          <div className='bg-cover bg-no-repeat bg-center h-full' style={{ backgroundImage: `url(${bgImg})` }}>
+          </div>
+        </div>
 
-          <img className='bg-fixed bg-cover bg-no-repeat bg-center' src={bgImg} alt="" />
-      </div>
 
-        
 
         <LittleNav />
 
