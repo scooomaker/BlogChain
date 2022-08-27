@@ -29,7 +29,10 @@ function LittleNav() {
       <Disclosure as="nav" className="bg-stone-50 shadow-md ">
         {() => (
           <>
-            {/* > 1279px */}
+
+
+
+            {/* Desktop > 1279px (pc and 4k) */}
             <div className="mx-auto px-2 xl:hidden">
 
               {/* main  */}
@@ -71,21 +74,25 @@ function LittleNav() {
               {/* main  */}
 
             </div>
-            {/* > 1279px */}
+            {/* Desktop > 1279px (pc and 4k) */}
 
 
-            {/* mobile phone */}
-            <div className='xlmin:hidden'>
+
+
+            {/* mobile < 1280px (iphone and ipad) */}
+            <div className='xlmin:hidden h-auto'>
               {/* img  */}
               <div className='relative'>
-                <div className='absolute  ml-8 -top-9 '>
-                  <img className="w-1/4 rounded-full shadow-2xl z-auto " src={profileImg} />
+                <div className='absolute  mobile:ml-8 mobile:-top-10 pad:ml-14 pad:-top-16 '>
+                  <div className='mobile:w-[90px] pad:w-[120px]'>
+                    <img className="rounded-full shadow-2xl z-auto " src={profileImg} />
+                  </div>
                 </div>
               </div>
               {/* img  */}
 
-              <div className='h-[255px] z-auto pt-16 pl-5 text-left'>
-                <div className=' text-2xl font-semibold'>Feng Xiao <span className='font-light text-right pl-5'>&</span></div> 
+              <div className='h-[255px] z-auto pt-16 mobile:pl-5 pad:pl-14 text-left'>
+                <div className=' text-2xl font-semibold'>Feng Xiao <span className='font-light text-right pl-5'>&</span></div>
                 <div className='text-sm font-thin '>@scooomaker</div>
                 <br /> <br />
                 <div className='font-light text-sm'>Not followed by anyone you're follwing </div>
@@ -93,28 +100,28 @@ function LittleNav() {
 
               {/* add the navigation item */}
               <div className="items-center justify-center sm:w-auto sm:overflow-auto sm:touch-pan-right sm:justify-start">
-                  <div className="flex mx-3 space-x-1">
-                    {navigation.map((item) => (
-                      <>
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
-                            'px-3 py-2 rounded-md text-sm font-medium'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      </>
-                    ))}
-                  </div>
+                <div className="flex mx-3 space-x-1">
+                  {navigation.map((item) => (
+                    <>
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
+                          'px-3 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    </>
+                  ))}
                 </div>
-                {/* add the navigation item */}
+              </div>
+              {/* add the navigation item */}
 
             </div>
-
+            {/* mobile < 1280px (iphone and ipad) */}
 
 
           </>
