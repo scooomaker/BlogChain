@@ -39,7 +39,7 @@ function LittleNav() {
               <div className="relative flex flex-row items-center justify-between h-16">
 
                 {/* img  */}
-                <div className='h-48 w-48 flex-1 flex justify-center z-30 sm:hidden'>
+                <div className='h-48 w-48 flex-1 flex justify-center z-30 sm:hidden 4k:w-60 4k:h-60'>
                   <img className="z-30 rounded-full -translate-y-6 shadow-2xl xl:hidden" src={profileImg} />
                 </div>
                 {/* img  */}
