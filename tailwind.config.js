@@ -25,12 +25,14 @@ module.exports = {
       'sm': { 'max': '639px' },
       // => @media (max-width: 639px) { ... }
 
-      'mobile': {'max': '420px'},
+      'mobile': {'max': '425px'},
       // => @media (max-width: 420px) { ... }
-      'pad': {'min': '421px', 'max': '1024px'},
+      'pad': {'min': '426px', 'max': '1024px'},
       // => @media (min-width: 421px and max-width: 1024px) { ... }
-      'pc': {'min': '1025px'},
-      // => @media (min-width: 1025px) { ... }
+      'pc': {'min': '1025px', 'max': '2559px'},
+      // => @media (min-width: 421px and max-width: 1024px) { ... }
+      '4k': {'min': '2560px'},
+      // => @media (min-width: 421px and max-width: 1024px) { ... }
     }
   },
   plugins: [],

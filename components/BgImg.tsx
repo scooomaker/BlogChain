@@ -6,7 +6,7 @@ const bgImg = 'https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg'
 function BgImg() {
   return (
       <>
-        <div className='h-96 md:h-80 sm:h-60 mobile:h-40'>
+        <div className='4k:h-[750px] pc:h-96 pad:h-60 mobile:h-40'>
           <div className='bg-cover bg-no-repeat bg-center h-full' style={{ backgroundImage: `url(${bgImg})` }}>
           </div>
         </div>

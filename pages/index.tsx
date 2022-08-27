@@ -12,18 +12,10 @@ const Home: NextPage = () => {
     <>
       <div className='bg-slate-200 h-[10000px]'>
         <Navbar />
-
         <BgImg />
-
-
-
         <LittleNav />
-
         <MainText />
-
       </div>
-
-
     </>
 
   )
