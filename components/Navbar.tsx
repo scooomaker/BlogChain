@@ -28,7 +28,7 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className="mx-auto px-2">
-            <div className="relative flex items-center justify-between h-16">
+            <div className="relative flex items-center justify-between h-[100px]">
               
               <div className="absolute inset-y-0 left-0 flex items-center">
 

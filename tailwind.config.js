@@ -23,9 +23,14 @@ module.exports = {
       // => @media (max-width: 767px) { ... }
 
       'sm': { 'max': '639px' },
-      'ssm': {'max': '450px'},
       // => @media (max-width: 639px) { ... }
 
+      'mobile': {'max': '420px'},
+      // => @media (max-width: 420px) { ... }
+      'pad': {'min': '421px', 'max': '1024px'},
+      // => @media (min-width: 421px and max-width: 1024px) { ... }
+      'pc': {'min': '1025px'},
+      // => @media (min-width: 1025px) { ... }
     }
   },
   plugins: [],
