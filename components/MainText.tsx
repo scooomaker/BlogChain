@@ -31,8 +31,8 @@ function Main() {
 
 
                         <div className='h-52 pt-5 pl-5 pr-2 pb-5 '>
-                            <h1 className='text-3xl'>Hello World</h1>
-                            <div className='font-serif'>May 26</div>
+                            <h1 className='text-3xl truncate'>Hello World Hello WorldHello WorldHello WorldHello World</h1>
+                            <div className='font-serif truncate'>May 26</div>
                             <hr />
                             <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'> 
                                 Next.js also has support for Image Optimization by default. This allows for resizing, optimizing, and serving images in modern formats like WebP when the browser supports it. This avoids shipping large images to devices with a smaller viewport.
@@ -42,8 +42,8 @@ function Main() {
                         </div>
 
                         <div className='h-52 pt-5 pl-5 pr-2 pb-5 '>
-                            <h1 className='text-3xl'>My Life</h1>
-                            <div className='font-serif'>May 24</div>
+                            <h1 className='text-3xl truncate'>My Life</h1>
+                            <div className='font-serif truncate'>May 24</div>
                             <hr />
                             <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'> 
                             Instead of optimizing images at build time, Next.js optimizes images on-demand, as users request them. Unlike static site generators and static-only solutions, your build times aren't increased, whether shipping 10 images or 10 million images.
