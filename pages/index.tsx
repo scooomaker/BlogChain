@@ -12,7 +12,7 @@ const bgImg = 'https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg'
 const Home: NextPage = () => {
   return (
     <>
-      <div className='bg-slate-200 '>
+      <div className='bg-slate-200 h-[10000px]'>
         <Navbar />
 
         {/* backgroundImage */}
