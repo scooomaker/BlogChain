@@ -1,5 +1,6 @@
 import React from 'react'
 import { Disclosure } from '@headlessui/react'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'Tweets', href: '#', current: true },
@@ -85,7 +86,7 @@ function LittleNav() {
               <div className='relative'>
                 <div className='absolute  mobile:ml-8 mobile:-top-10 pad:ml-14 pad:-top-16 '>
                   <div className='mobile:w-[90px] pad:w-[120px]'>
-                    <img className="rounded-full shadow-2xl z-auto " src={profileImg} />
+                      <Image src={profileImg} width={200} height={200} className="rounded-full   z-auto " />
                   </div>
                 </div>
               </div>
