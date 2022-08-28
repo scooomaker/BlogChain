@@ -21,6 +21,7 @@ const Home: NextPage = () => {
         <LittleNav />
         <MainText />
       </div>
+
     </>
 
   )

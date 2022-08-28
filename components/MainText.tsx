@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const profileImg = '/images/sea1.png'
 
 function Main() {
@@ -102,9 +103,6 @@ function Main() {
 
 
             </div>
-
-
-
             {/* < xl  */}
 
 
