@@ -1,9 +1,16 @@
 import React from 'react'
+import fs from 'fs';
+import matter from 'gray-matter';
+import Image from 'next/image';
+import Link from 'next/link';
 
 
 const profileImg = '/images/sea1.png'
+  
 
 function Main() {
+
+
     return (
         <>
             {/* > xl  */}
@@ -15,7 +22,7 @@ function Main() {
                         <p className='font-serif text-xl'>@scooomaker</p>
 
                         <br />
-                        <p>Instead of optimizing images at build time, Next.js optimizes images on-demand, as users request them. Unlike static site generators and static-only solutions,</p>
+                        <p></p>
 
                         <br />
                         <p>scooomaker@foxmail.com</p>
@@ -39,18 +46,11 @@ function Main() {
                             <div className='font-serif truncate'>May 26</div>
                             <hr />
                             <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'>
-                                Next.js also has support for Image Optimization by default. This allows for resizing, optimizing, and serving images in modern formats like WebP when the browser supports it. This 
+                                
                             </div>
                         </div>
 
-                        <div className='h-52 pt-5 pl-5 pr-2 pb-5 '>
-                            <h1 className='text-3xl truncate'>My Life</h1>
-                            <div className='font-serif truncate'>May 24</div>
-                            <hr />
-                            <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'>
-                                Instead of optimizing images at build time, Next.js optimizes images on-demand, as users request them. Unlike static site generators and static-only solutions, your build times 
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>

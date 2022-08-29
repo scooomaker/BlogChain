@@ -4,6 +4,10 @@ import Navbar from '../components/Navbar'
 import MainText from '../components/MainText'
 import BgImg from '../components/BgImg'
 import Head from 'next/head'
+import type { AppProps } from 'next/app'
+
+import fs from 'fs';
+import matter from 'gray-matter';
 
 
 
@@ -21,7 +25,6 @@ const Home: NextPage = () => {
         <LittleNav />
         <MainText />
       </div>
-
     </>
 
   )
