@@ -1,15 +1,11 @@
 import { Fragment } from 'react'
+import { AppProps } from 'next/app';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { AiOutlineHome } from 'react-icons/ai'
 import {BiHome} from 'react-icons/bi'
 
-const navigation = [
-  { name: 'Home', href: '#', current: false },
-  { name: 'Blog', href: '#', current: true },
-  { name: 'Friends', href: '#', current: false },
-  { name: 'Project', href: '#', current: false },
-]
+
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -20,14 +16,34 @@ const profile_img = '/images/sea1.png'
 // we must uses /images/xxx.png to change img 
 
 
-export default function Navbar() {
+export default function Navbar(props: { name: string; }) {
+  let cur1,cur2,cur3,cur4 = false;
+  if (props.name == "index")
+  {
+    cur1 = true;
+  } else if(props.name == "blog"){
+    cur2 = true;
+  } else if (props.name == "friends") {
+    cur3 = true;
+  } else if (props.name == "project") {
+    cur4 = true;
+  }
+
+  const navigation = [
+    { name: 'Home', href: '#', current: cur1 },
+    { name: 'Blog', href: '#', current: cur2 },
+    { name: 'Friends', href: '#', current: cur3 },
+    { name: 'Project', href: '#', current: cur4 },
+  ]
+
+
   return (
 
     <Disclosure as="nav" className="bg-stone-50 sticky top-0 z-40">
       {({ open }) => (
         <>
           <div className="mx-auto px-2">
-            <div className="relative flex items-center justify-between h-[100px]">
+            <div className="relative flex items-center justify-between mobile:h-[80px] pad:h-[100px] pc:h-[120px] 4k:h-[150px]">
               
               <div className="absolute inset-y-0 left-0 flex items-center">
 
@@ -76,7 +92,7 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
-                          'px-3 py-2 rounded-md text-[1.2vw]  pad:text-[18px] 4k:text-[18px] font-nav font-thin uppercase'
+                          'px-3 py-2 rounded-md text-[1.2vw]  pad:text-[18px] 4k:text-[25px] font-nav font-thin uppercase'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
