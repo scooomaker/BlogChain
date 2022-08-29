@@ -7,12 +7,6 @@ const navigation = [
   { name: 'Following', href: '#', current: false },
   { name: 'Followers', href: '#', current: false },
   { name: 'Likes', href: '#', current: false },
-  { name: 'Likes', href: '#', current: false },
-  { name: 'Followers', href: '#', current: false },
-  { name: 'Likes', href: '#', current: false },
-  { name: 'Likes', href: '#', current: false },
-
-
 
 ]
 
