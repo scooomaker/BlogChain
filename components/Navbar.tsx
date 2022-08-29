@@ -76,7 +76,7 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          'px-3 py-2 rounded-md text-[1.2vw]  pad:text-[18px] 4k:text-[18px] font-nav font-thin uppercase'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >

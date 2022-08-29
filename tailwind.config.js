@@ -5,6 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'nav': 'aktiv-grotesk, sans-serif',
+    },
     extend: {},
     screens: {
       '2xl': {'max': '1535px'},
