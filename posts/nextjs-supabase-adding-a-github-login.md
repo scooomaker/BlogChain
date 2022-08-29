@@ -1,5 +1,5 @@
 ---
-title: 'Next.js Supabase adding a GitHub login'
+title: 'Next.js Supabase'
 metaTitle: 'Next.js Supabase adding a GitHub login'
 metaDesc: 'How to add a GitHub login to Next.js using Supabase social authentication'
 socialImage: images/11-12-2021.jpg

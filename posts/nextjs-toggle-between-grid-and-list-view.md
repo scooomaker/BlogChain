@@ -1,5 +1,5 @@
 ---
-title: 'Next.js toggle between grid and list view'
+title: 'Next.js toggle '
 metaTitle: 'Next.js toggle between grid and list view'
 metaDesc: 'How to toggle between a grid and list in Next.js'
 socialImage: images/04-10-2021.jpg

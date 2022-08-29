@@ -1,5 +1,5 @@
 ---
-title: 'Next.js posting data to Postgres through Prisma'
+title: 'Next.js posting data'
 metaTitle: 'Next.js posting data to Postgres through Prisma'
 metaDesc: 'Posting data to Postgres using Prisma in Next.js'
 socialImage: images/27-10-2021.jpg
