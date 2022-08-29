@@ -22,12 +22,16 @@ What we'll be building:
 
 It will look like this:
 
-<!-- ![Next.js posting data to Postgres through Prisma](https://cdn.hashnode.com/res/hashnode/image/upload/v1634477800714/AYIILKoPa.gif) -->
+![Next.js posting data to Postgres through Prisma](https://cdn.hashnode.com/res/hashnode/image/upload/v1634477800714/AYIILKoPa.gif)
+
+```html
+<
+
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/prisma-post_ocdqqw.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/prisma-post_galhvt.mp4" type="video/mp4" />
 </video>
-
+```
 ## Setting up the starting point
 
 I'm going to use the [Spotify login example](https://daily-dev-tips.com/posts/retrieving-a-persons-spotify-playlist-in-nextjs/) we made yesterday as the starting point for today's article.

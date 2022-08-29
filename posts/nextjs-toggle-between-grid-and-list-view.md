@@ -14,12 +14,14 @@ It will give us the option to toggle between the list and grid view.
 
 The result will work like the video below.
 
+
+```html
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/gridlist_nkhwm4.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/gridlist_xdrt8a.mp4" type="video/mp4" />
 </video>
-
-<!-- ![Next.js toggle between grid and list view](https://cdn.hashnode.com/res/hashnode/image/upload/v1632638811731/wTlld_S4d.gif) -->
+```
+![Next.js toggle between grid and list view](https://cdn.hashnode.com/res/hashnode/image/upload/v1632638811731/wTlld_S4d.gif) 
 
 If you want to follow along, please use the [following branch](https://github.com/rebelchris/next-tailwind/tree/active-link) as your starting point.
 
