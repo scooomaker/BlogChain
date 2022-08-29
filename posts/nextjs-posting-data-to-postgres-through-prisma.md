@@ -4,6 +4,7 @@ metaTitle: 'Next.js posting data to Postgres through Prisma'
 metaDesc: 'Posting data to Postgres using Prisma in Next.js'
 socialImage: images/27-10-2021.jpg
 date: '2021-10-27'
+descript : 'However, sometimes you might need to find other hosting solutions for your Next.js application.Twe want.imes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wan'
 tags:
   - nextjs
   - prisma

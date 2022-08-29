@@ -4,6 +4,7 @@ metaTitle: 'Next.js page options and how they work'
 metaDesc: 'How to use pages in Next.js exploring the options'
 socialImage: images/22-09-2021.jpg
 date: '2021-09-22'
+descript : 'However, sometimes you might need to find other hosting solutions for your Next.js application.Twe want.imes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wan'
 tags:
   - nextjs
 ---

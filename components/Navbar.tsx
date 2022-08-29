@@ -65,7 +65,7 @@ export default function Navbar(props: { name: string }) {
               <div className="flex-1 flex items-center justify-start m-12 md:hidden">
 
                 {/* image here */}
-                <div className="flex-shrink-0 flex items-center">
+                {/* <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
                     src={logo}
@@ -76,7 +76,7 @@ export default function Navbar(props: { name: string }) {
                     src={logo}
                     alt="Workflow"
                   />
-                </div>
+                </div> */}
                 {/* image here */}
 
 
@@ -91,7 +91,7 @@ export default function Navbar(props: { name: string }) {
                           href={item.href}
                           className={classNames(
                             item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
-                            'px-3 py-2 rounded-md text-[1.2vw]  pad:text-[18px] 4k:text-[25px] font-nav font-thin uppercase'
+                            'px-3 py-2 rounded-md text-[1.2vw]  pad:text-[18px] 4k:text-[25px] font-nav font-[20] uppercase'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                         >

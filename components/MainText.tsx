@@ -1,9 +1,4 @@
 import React from 'react'
-import fs from 'fs';
-import matter from 'gray-matter';
-import Image from 'next/image';
-import Link from 'next/link';
-
 
 const profileImg = '/images/sea1.png'
   
@@ -90,15 +85,7 @@ function Main() {
                     </div>
                 </div>
 
-                <div className='h-52 pt-5 pl-5 pr-2 pb-5  mt-3 bg-stone-50 shadow-xl rounded-lg mx-2 '>
-                    <h1 className='text-3xl truncate'>My Life</h1>
-                    <div className='font-serif truncate'>May 24</div>
-                    <hr />
-                    <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'>
-                        Next.js also has support for Image Optimization by default. This allows for resizing, optimizing, and serving images in modern formats like WebP when the browser supports it.
-
-                    </div>
-                </div>
+        
 
 
 

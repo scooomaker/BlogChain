@@ -4,6 +4,7 @@ metaTitle: 'Next.js toggle between grid and list view'
 metaDesc: 'How to toggle between a grid and list in Next.js'
 socialImage: images/04-10-2021.jpg
 date: '2021-10-04'
+descript : 'However, sometimes you might need to find other hosting solutions for your Next.js application.Twe want.imes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wan'
 tags:
   - nextjs
 ---

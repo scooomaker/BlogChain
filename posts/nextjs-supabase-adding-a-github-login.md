@@ -4,6 +4,7 @@ metaTitle: 'Next.js Supabase adding a GitHub login'
 metaDesc: 'How to add a GitHub login to Next.js using Supabase social authentication'
 socialImage: images/11-12-2021.jpg
 date: '2021-12-11'
+descript : 'However, sometimes you might need to find other hosting solutions for your Next.js application.Twe want.imes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wan'
 tags:
   - nextjs
 ---
