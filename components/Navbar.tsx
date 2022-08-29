@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { AiOutlineHome } from 'react-icons/ai'
-import {BiHome} from 'react-icons/bi'
+import { BiHome } from 'react-icons/bi'
 
 
 
@@ -16,12 +16,11 @@ const profile_img = '/images/sea1.png'
 // we must uses /images/xxx.png to change img 
 
 
-export default function Navbar(props: { name: string; }) {
-  let cur1,cur2,cur3,cur4 = false;
-  if (props.name == "index")
-  {
+export default function Navbar(props: { name: string }) {
+  let cur1, cur2, cur3, cur4 = false;
+  if (props.name == "index") {
     cur1 = true;
-  } else if(props.name == "blog"){
+  } else if (props.name == "blog") {
     cur2 = true;
   } else if (props.name == "friends") {
     cur3 = true;
@@ -30,10 +29,10 @@ export default function Navbar(props: { name: string; }) {
   }
 
   const navigation = [
-    { name: 'Home', href: '#', current: cur1 },
-    { name: 'Blog', href: '#', current: cur2 },
-    { name: 'Friends', href: '#', current: cur3 },
-    { name: 'Project', href: '#', current: cur4 },
+    { name: 'Home', href: '/', current: cur1 },
+    { name: 'Blog', href: '/blog/page', current: cur2 },
+    { name: 'Friends', href: '/friends', current: cur3 },
+    { name: 'Project', href: '/project', current: cur4 },
   ]
 
 
@@ -44,25 +43,25 @@ export default function Navbar(props: { name: string; }) {
         <>
           <div className="mx-auto px-2">
             <div className="relative flex items-center justify-between mobile:h-[80px] pad:h-[100px] pc:h-[120px] 4k:h-[150px]">
-              
+
               <div className="absolute inset-y-0 left-0 flex items-center">
 
                 {/* Mobile menu button*/}
                 <div className='invisible md:visible'>
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-sky-200
                  ">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
+                    <span className="sr-only">Open main menu</span>
+                    {open ? (
+                      <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    ) : (
+                      <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    )}
+                  </Disclosure.Button>
                 </div>
-                
+
               </div>
 
-              
+
               <div className="flex-1 flex items-center justify-start m-12 md:hidden">
 
                 {/* image here */}
@@ -82,36 +81,36 @@ export default function Navbar(props: { name: string; }) {
 
 
                 {/* add the navigation item */}
-                <div className="">
+                <div className="ml-5">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <>
                         {/* here you should add icons */}
                         <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
-                          'px-3 py-2 rounded-md text-[1.2vw]  pad:text-[18px] 4k:text-[25px] font-nav font-thin uppercase'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
+                            'px-3 py-2 rounded-md text-[1.2vw]  pad:text-[18px] 4k:text-[25px] font-nav font-thin uppercase'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
                       </>
-                     
+
                     ))}
                   </div>
                 </div>
                 {/* add the navigation item */}
 
-                
+
               </div>
 
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 ">
 
-              {/* View notifications button start */}
+                {/* View notifications button start */}
                 <button
                   type="button"
                   className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -120,8 +119,8 @@ export default function Navbar(props: { name: string; }) {
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
                 {/* View notifications button end  */}
-                      
-                
+
+
                 {/* Profile start */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
@@ -179,15 +178,15 @@ export default function Navbar(props: { name: string; }) {
                 </Menu>
                 {/* Profile end */}
 
-                
+
               </div>
 
 
-              
+
             </div>
           </div>
 
-  
+
 
           {/* navigation list (phone) start */}
           <Disclosure.Panel className="absolute">
@@ -209,10 +208,10 @@ export default function Navbar(props: { name: string; }) {
             </div>
           </Disclosure.Panel>
           {/* nabigation list (phone) end  */}
-          
+
         </>
       )}
-      </Disclosure>
-    
+    </Disclosure>
+
   )
 }

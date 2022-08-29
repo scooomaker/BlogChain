@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "suppressImplicitAnyIndexErrors":true,
+    // "suppressImplicitAnyIndexErrors":true,
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/posts.js", "pages/blog/page.jsx"],
