@@ -80,7 +80,7 @@ export default function Blog({ posts }) {
                 </div>
 
               ))}
-            
+
 
           </div>
         </div>
@@ -109,28 +109,35 @@ export default function Blog({ posts }) {
 
 
 
-      {/* <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
+      {/* < xl  */}
+      <div className="xlmin:hidden space-y-4">
+
         {
           posts.map(({ slug, frontmatter }) => (
-            <div
-              key={slug}
-              className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col'
-            >
+
+            <div key={slug} className="h-52 pt-5 pl-5 pr-2 pb-5  mt-3 bg-stone-50 shadow-xl rounded-lg mx-2 ">
               <Link href={`/post/${slug}`}>
-                <a>
-                  <Image
-                    width={650}
-                    height={340}
-                    alt={frontmatter.title}
-                    src={`/${frontmatter.socialImage}`}
-                  />
-                  <h1 className='p-4'>{frontmatter.title}</h1>
-                </a>
+                <div className='h-52 pt-5 pl-5 pr-2 pb-5 cursor-pointer'>
+                  <h1 className='text-3xl truncate'>{frontmatter.title}</h1>
+                  <div className='font-serif truncate'>{frontmatter.date}</div>
+                  <hr />
+                  <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text'>
+                    {frontmatter.descript}
+                  </div>
+
+                </div>
               </Link>
             </div>
+
           ))
         }
-      </div> */}
+
+      </div>
+      {/* < xl  */}
+
+
+
+      
     </>
 
   );
