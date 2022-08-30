@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'nav': 'aktiv-grotesk, sans-serif',
+      'qg': 'Qwitcher Grypen, cursive',
     },
     extend: {},
     screens: {
