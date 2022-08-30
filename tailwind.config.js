@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     fontFamily: {
       'nav': 'aktiv-grotesk, sans-serif',
-      'qg': 'Qwitcher Grypen, cursive',
+      'QwitcherGrypen': 'Qwitcher Grypen, cursive',
+      'MrsSheppards': 'Mrs Sheppards, cursive ',
+      'MrDafoe': 'Mr Dafoe, cursive',
     },
     extend: {},
     screens: {

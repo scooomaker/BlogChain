@@ -15,14 +15,14 @@ const Home: NextPage = () => {
           href="https://fonts.gstatic.com"
           crossOrigin='true' />
         <link
-          href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Mrs+Sheppards&family=Qwitcher+Grypen:wght@700&display=swap"
           rel="stylesheet" />
       </Head>
 
 
       <div className=''>
         <Navbar name="index" />
-        <div className="flex font-qg font-medium pl-9 text-[6vw] h-screen items-center">
+        <div className="flex font-MrDafoe pl-8 h-screen items-center mobile:text-[60px] pad:text-[96px] pc:text-[128px] pc:pl-[90px] 4k:text-[140px] 4k:pl-[100px]">
           <span> Hi, I am scooo.</span>
         </div>
 
