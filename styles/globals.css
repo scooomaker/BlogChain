@@ -10,6 +10,10 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
   }
+
+  .pages {
+    transition: font-size 0.5s;
+  }
   
 
 }
