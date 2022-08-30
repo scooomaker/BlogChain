@@ -1,6 +1,5 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import Image from 'next/image';
 import Link from 'next/link';
 import BgImg from '../../components/BgImg';
 import LittleNav from '../../components/LittleNav';
@@ -66,7 +65,7 @@ export default function Blog({ posts }) {
               posts.map(({ slug, frontmatter }) => (
 
                 <div key={slug}>
-                  <Link href={`/post/${slug}`}>
+                  <Link href={`/blog/${slug}`}>
                     <div className='h-52 pt-5 pl-5 pr-2 pb-5 cursor-pointer'>
                       <h1 className='text-3xl truncate'>{frontmatter.title}</h1>
                       <div className='font-serif truncate'>{frontmatter.date}</div>
@@ -116,7 +115,7 @@ export default function Blog({ posts }) {
           posts.map(({ slug, frontmatter }) => (
 
             <div key={slug} className="h-52 pt-5 pl-5 pr-2 pb-5  mt-3 bg-stone-50 shadow-xl rounded-lg mx-2 ">
-              <Link href={`/post/${slug}`}>
+              <Link href={`/blog/${slug}`}>
                 <div className='h-52 pt-5 pl-5 pr-2 pb-5 cursor-pointer'>
                   <h1 className='text-3xl truncate'>{frontmatter.title}</h1>
                   <div className='font-serif truncate'>{frontmatter.date}</div>
@@ -137,7 +136,7 @@ export default function Blog({ posts }) {
 
 
 
-      
+
     </>
 
   );

@@ -5,9 +5,9 @@ function project() {
     return (
         <>
             <Navbar name="project" />
-         <div>project</div>
+            <div>project</div>
         </>
-      
+
     )
 }
 
