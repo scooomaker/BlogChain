@@ -10,7 +10,7 @@ function friends() {
     <>
       <Navbar name="friends" />
       <main className='h-screen'>
-        <div className="max-w-[1200px] mx-auto apple text-[48px] py-5">
+        <div className="max-w-[1200px] mx-auto apple text-[48px] py-[5vh] px-[8vw] font-bold">
           Me
           <hr className='mt-5' />
 
@@ -26,7 +26,7 @@ function friends() {
             </div>
           </div> */}
 
-
+          
         </div>
       </main>
 
