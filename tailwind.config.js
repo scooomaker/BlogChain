@@ -10,7 +10,8 @@ module.exports = {
       'QwitcherGrypen': 'Qwitcher Grypen, cursive',
       'MrsSheppards': 'Mrs Sheppards, cursive ',
       'MrDafoe': 'Mr Dafoe, cursive',
-      'JosefinSans':'Josefin Sans, sans-serif',
+      'JosefinSans': 'Josefin Sans, sans-serif',
+      'SFProDisplay':["SF Pro Display", "Segoe UI",  "Helvetica Neue", "Noto Sans",  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ],
     },
     extend: {
       

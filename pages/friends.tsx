@@ -1,13 +1,38 @@
+import Image from 'next/image'
 import React from 'react'
 import Navbar from '../components/Navbar'
 
+
+const profileImg = '/images/sea1.png'
+
 function friends() {
-    return (
-      <>
-            <Navbar name="friends" />
-            <div>friends</div>
-      </>
-    
+  return (
+    <>
+      <Navbar name="friends" />
+      <main className='h-screen'>
+        <div className="max-w-[1200px] mx-auto apple text-[48px] py-5">
+          Me
+          <hr className='mt-5' />
+
+
+          {/* <div className='h-auto flex my-5 bg-blue-50'>
+            <div className='w-[128px]'>
+              <img src={profileImg} alt="" className="rounded-lg"/>
+            </div>
+            
+            <div className='ml-9'>
+              <p className='text-[30px]'>FengXiao</p>
+              <p></p>
+            </div>
+          </div> */}
+
+
+        </div>
+      </main>
+
+
+    </>
+
   )
 }
 
