@@ -111,7 +111,7 @@ export default function Navbar(props: { name: string }) {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? ' text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
+                    item.current ? ' text-black' : 'text-slate-500',
                     'block px-3 py-2 rounded-md text-base ml-12 mr-12 uppercase mobile:ml-3'
                   )}
                   aria-current={item.current ? 'page' : undefined}
