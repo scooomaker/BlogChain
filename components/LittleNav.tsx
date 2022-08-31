@@ -78,15 +78,15 @@ function LittleNav() {
             <div className='xlmin:hidden h-auto'>
               {/* img  */}
               <div className='relative'>
-                <div className='absolute  mobile:ml-8 mobile:-top-10 pad:ml-14 pad:-top-16 '>
-                  <div className='mobile:w-[90px] pad:w-[120px]'>
+                <div className='absolute  mobile:ml-8 mobile:-top-10 pad:ml-14 pad:-top-16 pc:ml-14 pc:-top-16'>
+                  <div className='mobile:w-[90px] pad:w-[120px] pc:w-[120px]'>
                       <Image src={profileImg} width={200} height={200} className="rounded-full   z-auto " />
                   </div>
                 </div>
               </div>
               {/* img  */}
 
-              <div className='h-[255px] z-auto pt-16 mobile:pl-5 pad:pl-14 text-left'>
+              <div className='h-[255px] z-auto pt-16 mobile:pl-5 pad:pl-14 pc:pl-14 text-left'>
                 <div className=' text-2xl font-semibold'>Feng Xiao <span className='font-light text-right pl-5'>&</span></div>
                 <div className='text-sm font-thin '>@scooomaker</div>
                 <br /> <br />
