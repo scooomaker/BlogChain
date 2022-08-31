@@ -47,7 +47,7 @@ export default function Navbar(props: { name: string }) {
               <div className="flex-1 flex items-center justify-start m-12 mobile:m-3">
                 {/* image here */}
                 <div className="flex-shrink-0 flex items-center">
-                  <div className='uppercase  text-[35px] font-JosefinSans mb-0 pb-0 pt-2 mobile:text-[20px] pad:text-[28px]'>
+                  <div className='uppercase  text-[35px] font-JosefinSans mb-0 pb-0 pt-2 mobile:text-[20px] pad:text-[28px] select-none'>
                     {name}
                   </div>
                   {/* <imgont-bold

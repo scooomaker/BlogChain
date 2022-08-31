@@ -11,9 +11,28 @@
     -webkit-box-orient: vertical;
   }
 
-  .pages {
-    transition: font-size 0.5s;
+  @keyframes pagefunc{
+    0%{
+      font-size:10px;
+    }
+
+    100%{
+      @apply
+      mobile:text-[60px] 
+      pad:text-[96px] 
+      pc:text-[128px] 
+      pc:pl-[90px] 
+      4k:text-[140px]
+    }
   }
+
+
+  .pages {
+    animation: pagefunc 0.5s ease;
+    animation-iteration-count: 1;
+  }
+
+
   @keyframes funcnav{
     0%{
       margin-right: 0px/* 20px */;
