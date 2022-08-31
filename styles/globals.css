@@ -7,7 +7,7 @@
   .discript-text {
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
   }
 
@@ -64,8 +64,10 @@
   }
 
   .navmap{
-    animation: mapnav 0.4s;
+    animation: mapnav 0.9s;
   }
+
+
 
   
 

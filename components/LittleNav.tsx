@@ -21,21 +21,21 @@ const profileImg = '/images/sea1.png'
 function LittleNav() {
   return (
     <>
-      <Disclosure as="nav" className="bg-stone-50 shadow-md ">
+      <Disclosure as="nav" className="bg-stone-50 shadow-md">
         {() => (
           <>
 
 
 
             {/* Desktop > 1279px (pc and 4k) */}
-            <div className="mx-auto px-2 xl:hidden">
+            <div className="max-w-[2650px] mx-auto px-2 xl:hidden">
 
               {/* main  */}
               <div className="relative flex flex-row items-center justify-between h-16">
 
                 {/* img  */}
                 <div className='h-48 w-48 flex-1 flex justify-center z-30 sm:hidden 4k:w-60 4k:h-60'>
-                  <img className="z-30 rounded-full -translate-y-6 shadow-2xl xl:hidden" src={profileImg} />
+                  <img className="z-30 rounded-full -translate-y-6  ring-white ring-2 shadow-2xl xl:hidden" src={profileImg} />
                 </div>
                 {/* img  */}
 

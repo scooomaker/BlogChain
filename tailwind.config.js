@@ -39,7 +39,9 @@ module.exports = {
       // => @media (max-width: 420px) { ... }
       'pad': {'min': '426px', 'max': '1278px'},
       // => @media (min-width: 421px and max-width: 1024px) { ... }
-      'pc': {'min': '1279px', 'max': '2559px'},
+      'pc': { 'min': '1279px', 'max': '2559px' },
+      
+      'spc': {'min': '1800px', 'max': '2600px'},
       // => @media (min-width: 421px and max-width: 1024px) { ... }
       '4k': {'min': '2560px'},
       // => @media (min-width: 421px and max-width: 1024px) { ... }
