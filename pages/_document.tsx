@@ -9,7 +9,7 @@ export default function Document() {
                     href="https://fonts.gstatic.com"
                     crossOrigin='true' />
                 <link
-                    rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Mrs+Sheppards&family=Qwitcher+Grypen:wght@700&display=swap"
+                    rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Mr+Dafoe&family=Mrs+Sheppards&family=Qwitcher+Grypen&display=swap"
                 />
 
             </Head>

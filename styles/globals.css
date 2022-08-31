@@ -14,6 +14,24 @@
   .pages {
     transition: font-size 0.5s;
   }
+  @keyframes spin{
+    0%{
+      margin-right: 0px/* 20px */;
+      opacity: 0;
+    }
+
+    100%{
+      margin-right: 35px;
+      opacity: 1;
+    }
+  }
+
+  .navfunc{
+    animation: spin 0.4s ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
   
 
 }

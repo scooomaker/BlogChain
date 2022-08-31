@@ -10,8 +10,11 @@ module.exports = {
       'QwitcherGrypen': 'Qwitcher Grypen, cursive',
       'MrsSheppards': 'Mrs Sheppards, cursive ',
       'MrDafoe': 'Mr Dafoe, cursive',
+      'JosefinSans':'Josefin Sans, sans-serif',
     },
-    extend: {},
+    extend: {
+      
+    },
     screens: {
       '2xl': {'max': '1535px'},
       // => @media (max-width: 1535px) { ... }
@@ -22,7 +25,8 @@ module.exports = {
       'xlmin': {'min': '1280px'},
       // => @media (max-width: 1279px) { ... }
 
-      'lg': {'max': '1023px'},
+      'lg': { 'max': '1023px' },
+      'lgmin': {'min': '1022px'},
       // => @media (max-width: 1023px) { ... }
       '2md':{'max': '963px'},
       'md': {'max': '767px'},

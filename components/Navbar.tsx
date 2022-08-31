@@ -17,16 +17,16 @@ const profile_img = '/images/sea1.png'
 
 
 export default function Navbar(props: { name: string }) {
-  let cur1, cur2, cur3, cur4 = false;
-  if (props.name == "index") {
-    cur1 = true;
-  } else if (props.name == "blog") {
-    cur2 = true;
-  } else if (props.name == "friends") {
-    cur3 = true;
-  } else if (props.name == "project") {
-    cur4 = true;
+  let cur1 = false, cur2 = false, cur3 = false, cur4 = false;
+  let name:string;
+  switch (props.name) {
+    case 'index': cur1 = true; name = 'home'; break;
+    case 'blog': cur2 = true;name = 'blog'; break;
+    case 'friends': cur3 = true;name = 'friends'; break;
+    case 'project': cur4 = true; name = 'project';break;
+    default:break;
   }
+
 
   const navigation = [
     { name: 'Home', href: '/', current: cur1 },
@@ -44,25 +44,66 @@ export default function Navbar(props: { name: string }) {
           <div className="mx-auto px-2">
             <div className="relative flex items-center justify-end mobile:h-[80px] pad:h-[100px] pc:h-[120px] 4k:h-[150px]">
 
-              <div className=''>
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 
-                 ">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XIcon className="block h-9 w-9" aria-hidden="true" />
-                  ) : (
-                    <MenuIcon className="block h-9 w-9" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
+              <div className="flex-1 flex items-center justify-start m-12">
+                {/* image here */}
+                <div className="flex-shrink-0 flex items-center">
+                  <div className='uppercase  text-[35px] font-JosefinSans mb-0 pb-0 pt-2'>
+                    {name}
+                  </div>
+                  {/* <img
+                    className="block h-8 w-auto"
+                    src={logo}
+                    alt="Workflow"
+                  /> */}
+                </div>
               </div>
+
+
+              <Disclosure.Panel className="lg:hidden">
+                <div className=''>
+                  {navigation.map((item) => (
+                    <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className={classNames(
+                        item.current ? ' text-black' : 'text-slate-500',
+                        'navfunc uppercase text-[30px] font-thin '
+                      )}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  ))}
+                </div>
+              </Disclosure.Panel>
+
+
+
+              <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 ">
+                <span className="sr-only">Open main menu</span>
+                {open ? (
+                  <>
+                    <XIcon className="block h-12 w-12" aria-hidden="true" />
+                  </>
+
+                ) : (
+                  <>
+                    <MenuIcon className="block h-12 w-12" aria-hidden="true" />
+                  </>
+                )}
+              </Disclosure.Button>
+
+
+
 
             </div>
           </div>
 
 
 
-          {/* navigation list (phone) start */}
-          <Disclosure.Panel className="absolute">
+
+          <Disclosure.Panel className="absolute lgmin:hidden">
             <div className="w-screen h-screen px-2 pt-2 pb-3 space-y-1  z-auto bg-slate-100 ">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -80,7 +121,10 @@ export default function Navbar(props: { name: string }) {
               ))}
             </div>
           </Disclosure.Panel>
-          {/* nabigation list (phone) end  */}
+
+
+
+
 
         </>
       )}
