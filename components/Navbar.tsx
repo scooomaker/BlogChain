@@ -104,7 +104,7 @@ export default function Navbar(props: { name: string }) {
 
 
           <Disclosure.Panel className="absolute lgmin:hidden">
-            <div className="w-screen h-[220px] space-y-3  z-auto bg-stone-50  navmap ">
+            <div className="w-screen  space-y-3 h-[200px] z-auto bg-stone-50  navmap ">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
