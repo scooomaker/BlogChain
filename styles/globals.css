@@ -14,7 +14,7 @@
   .pages {
     transition: font-size 0.5s;
   }
-  @keyframes spin{
+  @keyframes funcnav{
     0%{
       margin-right: 0px/* 20px */;
       opacity: 0;
@@ -27,9 +27,26 @@
   }
 
   .navfunc{
-    animation: spin 0.4s ease;
+    animation: funcnav 0.4s ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+
+  @keyframes mapnav{
+    0%{
+      background-color: rgb(255 255 255);
+      opacity: 0;
+    }
+
+    100%{
+      background-color: rgb(250 250 249);
+      opacity: 1;
+    }
+  }
+
+  .navmap{
+    animation: mapnav 0.5s ease;
+    animation-iteration-count: 1;
   }
 
   

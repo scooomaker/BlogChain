@@ -44,13 +44,13 @@ export default function Navbar(props: { name: string }) {
           <div className="mx-auto px-2">
             <div className="relative flex items-center justify-end mobile:h-[80px] pad:h-[100px] pc:h-[120px] 4k:h-[150px]">
 
-              <div className="flex-1 flex items-center justify-start m-12">
+              <div className="flex-1 flex items-center justify-start m-12 mobile:m-3">
                 {/* image here */}
                 <div className="flex-shrink-0 flex items-center">
-                  <div className='uppercase  text-[35px] font-JosefinSans mb-0 pb-0 pt-2'>
+                  <div className='uppercase  text-[35px] font-JosefinSans mb-0 pb-0 pt-2 mobile:text-[20px] pad:text-[28px]'>
                     {name}
                   </div>
-                  {/* <img
+                  {/* <imgont-bold
                     className="block h-8 w-auto"
                     src={logo}
                     alt="Workflow"
@@ -68,7 +68,7 @@ export default function Navbar(props: { name: string }) {
                       href={item.href}
                       className={classNames(
                         item.current ? ' text-black' : 'text-slate-500',
-                        'navfunc uppercase text-[30px] font-thin '
+                        'navfunc uppercase text-[30px] font-thin pad:text-[25px]'
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >
@@ -84,12 +84,12 @@ export default function Navbar(props: { name: string }) {
                 <span className="sr-only">Open main menu</span>
                 {open ? (
                   <>
-                    <XIcon className="block h-12 w-12" aria-hidden="true" />
+                    <XIcon className="block h-12 w-12 mobile:h-8 mobile:w-8 pad:h-10 pad:w-10" aria-hidden="true" />
                   </>
 
                 ) : (
                   <>
-                    <MenuIcon className="block h-12 w-12" aria-hidden="true" />
+                    <MenuIcon className="block h-12 w-12 mobile:h-8 mobile:w-8 pad:h-10 pad:w-10" aria-hidden="true" />
                   </>
                 )}
               </Disclosure.Button>
@@ -104,7 +104,7 @@ export default function Navbar(props: { name: string }) {
 
 
           <Disclosure.Panel className="absolute lgmin:hidden">
-            <div className="w-screen h-screen px-2 pt-2 pb-3 space-y-1  z-auto bg-slate-100 ">
+            <div className="w-screen h-[220px] space-y-3  z-auto bg-stone-50  navmap ">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -112,7 +112,7 @@ export default function Navbar(props: { name: string }) {
                   href={item.href}
                   className={classNames(
                     item.current ? 'bg-sky-200 text-black' : 'text-slate-500 hover:bg-sky-50 hover:text-inherit',
-                    'block px-3 py-2 rounded-md text-base font-medium '
+                    'block px-3 py-2 rounded-md text-base font-medium ml-12 mr-12'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
