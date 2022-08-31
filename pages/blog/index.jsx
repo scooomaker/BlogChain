@@ -41,22 +41,22 @@ export default function Blog({ posts }) {
       {/* > xl  */}
       <div className="flex flex-row subpixel-antialiased max-w-[2300px]  mx-auto xl:hidden">
         {/* left lan  */}
-        <div className="basis-3/12 spc:basis-4/12 m-8 pl-36 pt-16 pr-10 font-sans">
+        <div className="basis-3/12 spc:basis-4/12 m-8 pl-36 pt-16 pr-10">
           <div className='spc:pl-20'>
-            <div className='text-5xl pb-1 font-medium'>{profile.name}</div>
-            <p className='font-serif text-xl'>{profile.id}</p>
+            <div className='text-5xl pb-1 font-bold apple'>{profile.name}</div>
+            <p className='font-serif font-light text-[18px]'>{profile.id}</p>
 
             <br />
             <p></p>
 
             <br />
-            <p>{profile.mail}</p>
+            <p className='apple'>{profile.mail}</p>
 
           </div>
         </div>
 
         {/* center lan  */}
-        <div className="basis-6/12 spc:basis-5/12 mt-3 h-full  ">
+        <div className="basis-6/12 spc:basis-5/12 mt-3 h-full  apple">
           <div className='flex flex-col'>
 
             {posts.map(({ slug, frontmatter }) => (
