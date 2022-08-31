@@ -112,14 +112,14 @@ export default function Blog({ posts }) {
 
 
       {/* < xl  */}
-      <div className="xlmin:hidden space-y-4">
+      <div className="xlmin:hidden space-y-7">
 
         {
           posts.map(({ slug, frontmatter }) => (
 
-            <div key={slug} className="h-52 pt-5 pl-5 pr-2 pb-5  mt-3 bg-stone-50 shadow-xl rounded-lg mx-2 ">
+            <div key={slug} className="h-52 pt-5 pl-5 pr-2 pb-5  mt-3 bg-stone-50 drop-shadow-xl rounded-lg mx-2 ">
               <Link href={`/blog/${slug}`}>
-                <div className='h-52 pt-5 pl-5 pr-2 pb-5 cursor-pointer'>
+                <div className='h-52 pl-4 pr-2 pb-5 cursor-pointer'>
                   <h1 className='text-3xl truncate'>{frontmatter.title}</h1>
                   <div className='font-serif truncate'>{frontmatter.date}</div>
                   <hr />
