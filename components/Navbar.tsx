@@ -30,7 +30,7 @@ export default function Navbar(props: { name: string }) {
 
   const navigation = [
     { name: 'Home', href: '/', current: cur1 },
-    { name: 'Blog', href: '/blog/page', current: cur2 },
+    { name: 'Blog', href: '/blog/', current: cur2 },
     { name: 'Friends', href: '/friends', current: cur3 },
     { name: 'Project', href: '/project', current: cur4 },
   ]
