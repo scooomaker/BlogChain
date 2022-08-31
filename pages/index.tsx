@@ -7,11 +7,7 @@ import Navbar from '../components/Navbar'
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Blog</title>
-        <link rel="icon" href="/favicon.ico" />
-        
-      </Head>
+      
 
 
       <div className='z-auto'>

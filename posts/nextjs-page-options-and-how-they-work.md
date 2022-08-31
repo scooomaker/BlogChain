@@ -1,199 +1,115 @@
 ---
-title: 'Next.js page options'
-metaTitle: 'Next.js page options and how they work'
-metaDesc: 'How to use pages in Next.js exploring the options'
-socialImage: images/22-09-2021.jpg
-date: '2021-09-22'
-descript : 'However, sometimes you might need to find other hosting solutions for your Next.js application.Twe want.imes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wanimes you might need to find other hosting solutions for your Next.js application.Twe wan'
+title: 'Hello World'
+date: '2022-08-31 19:42'
+descript : '我的新博客写好啦'
 tags:
-  - nextjs
+  - 
 ---
 
-Creating pages is an integral part of any framework. Today we'll be looking at three different types of pages that we can leverage in Next.js.
+# A demo of `react-markdown`
 
-1. Static pages (`/about`, `/contact`)
-2. Dynamic page content (`/posts/all`)
-3. Dynamic page paths (`/posts/1`, `posts/2`)
+`react-markdown` is a markdown component for React.
 
-Let's look at how we can create these in Next.js.
+👉 Changes are re-rendered as you type.
 
-## Static pages in Next.js
+👈 Try writing some markdown on the left.
 
-To create static pages, we can simply create a file in our `pages` folder.
-This file can be a variety of extensions: `.js`, `.jsx`, `.ts`, `.tsx`.
+## Overview
 
-Let's create a simple static contact page for our [Next.js tailwind starter](https://github.com/rebelchris/next-tailwind).
+* Follows [CommonMark](https://commonmark.org)
+* Optionally follows [GitHub Flavored Markdown](https://github.github.com/gfm/)
+* Renders actual React elements instead of using `dangerouslySetInnerHTML`
+* Lets you define your own components (to render `MyHeading` instead of `h1`)
+* Has a lot of plugins
 
-Create a file called `contact.js` in your `pages` folder.
+## Table of contents
 
-```js
-import Head from 'next/head';
+Here is an example of a plugin in action
+([`remark-toc`](https://github.com/remarkjs/remark-toc)).
+This section is replaced by an actual table of contents.
 
-export default function Contact() {
-  return (
-    <div className='flex items-center justify-center min-h-screen'>
-      <Head>
-        <title>Contact page</title>
-        <meta name='description' content='Contact us' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+## Syntax highlighting
 
-      <div className='max-w-xs my-2 overflow-hidden rounded shadow-lg'>
-        <div className='px-6 py-4'>
-          <div className='mb-2 text-xl font-bold'>Contact us</div>
-          <p className='text-base text-grey-darker'>
-            This will be the place to contact us later on.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-```
-
-And now if we run our script again `npm run dev` we can visit `http://localhost:3000/contact`.
-
-This should now show the page we just created.
-
-![Contact page in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1631702332167/H9HkNDp6F.png)
-
-## Creating dynamic based pages
-
-However, we often want our page to contain data from an external resource.
-
-Let's take the Anime API we used before as an example.
-The API endpoint we'll be using: `https://api.jikan.moe/v3/top/anime/1`.
-
-But let's first create a file called `shows.js` that should list all the top anime shows.
-
-We need to use the `getStaticProps` function for this to work. This function will fire and fetch data from an API.
-Then passes it to the actual view.
-
-So let's break it up into sections and fill those out one by one.
+Here is an example of a plugin to highlight code:
+[`rehype-highlight`](https://github.com/rehypejs/rehype-highlight).
 
 ```js
-function Shows({ shows }) {
-  return (
-    // HTML CODE
-  );
-}
+import React from 'react'
+import ReactDOM from 'react-dom'
+import ReactMarkdown from 'react-markdown'
+import rehypeHighlight from 'rehype-highlight'
 
-export async function getStaticProps() {
-  const shows = // TODO;
-  return {
-    props: {
-      shows,
-    },
-  };
-}
-
-export default Shows;
+ReactDOM.render(
+  <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{'# Your markdown here'}</ReactMarkdown>,
+  document.querySelector('#content')
+)
 ```
 
-So this is the main wireframe. We have our function that contains the JSX code (HTML), then we have the `getStaticProps` function, which fires on build time.
+Pretty neat, eh?
 
-This can do API calls while we await it.
-And we can then return them as props.
+## GitHub flavored markdown (GFM)
 
-These props are passed to our primary function (Shows).
+For GFM, you can *also* use a plugin:
+[`remark-gfm`](https://github.com/remarkjs/react-markdown#use).
+It adds support for GitHub-specific extensions to the language:
+tables, strikethrough, tasklists, and literal URLs.
 
-So let's see how we can fetch data inside the `getStaticProps` function.
+These features **do not work by default**.
+👆 Use the toggle above to add the plugin.
+
+| Feature    | Support              |
+| ---------: | :------------------- |
+| CommonMark | 100%                 |
+| GFM        | 100% w/ `remark-gfm` |
+
+~~strikethrough~~
+
+* [ ] task list
+* [x] checked item
+
+https://example.com
+
+## HTML in markdown
+
+⚠️ HTML in markdown is quite unsafe, but if you want to support it, you can
+use [`rehype-raw`](https://github.com/rehypejs/rehype-raw).
+You should probably combine it with
+[`rehype-sanitize`](https://github.com/rehypejs/rehype-sanitize).
+
+<blockquote>
+  👆 Use the toggle above to add the plugin.
+</blockquote>
+
+## Components
+
+You can pass components to change things:
 
 ```js
-const res = await fetch('https://api.jikan.moe/v3/top/anime/1');
-const shows = await res.json();
+import React from 'react'
+import ReactDOM from 'react-dom'
+import ReactMarkdown from 'react-markdown'
+import MyFancyRule from './components/my-fancy-rule.js'
+
+ReactDOM.render(
+  <ReactMarkdown
+    components={{
+      // Use h2s instead of h1s
+      h1: 'h2',
+      // Use a component instead of hrs
+      hr: ({node, ...props}) => <MyFancyRule {...props} />
+    }}
+  >
+    # Your markdown here
+  </ReactMarkdown>,
+  document.querySelector('#content')
+)
 ```
 
-As you can see, top-level awaits are supported out of the box, which is super handy!
-We call the API, await the response, and convert it into a JSON object.
+## More info?
 
-Then as for our HTML, we can now use this `shows` object since we passed it to our function.
+Much more info is available in the
+[readme on GitHub](https://github.com/remarkjs/react-markdown)!
 
-```js
-function Shows({ shows }) {
-  return (
-    <div className='grid min-h-screen grid-cols-5 gap-4 p-5'>
-      {shows.top.map((show) => (
-        <div
-          key={show.id}
-          className='max-w-xs my-2 overflow-hidden rounded shadow-lg '
-        >
-          <img
-            className='flex-1 object-cover w-full h-80'
-            src={show.image_url}
-            alt={show.title}
-          />
-          <div className='px-6 py-4'>
-            <div className='mb-2 text-xl font-bold'>{show.title}</div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-```
+***
 
-We create a simple render of each show's own card, with an image and title of the anime show.
-
-![Top anime show in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1631712831922/I1Yb9K2DQ.png)
-
-## Creating dynamic page paths
-
-We still only have one page that loads dynamic data with the above example.
-Let's say we want to create a single page for each show.
-
-These pages could host more detailed information about the show.
-
-In Next.js, we can create dynamic pages by wrapping them in brackets like `show/[id].js` where the `[id]` is dynamic.
-
-For this, we can leverage the `getStaticPaths` method.
-This can pre-fetch our endpoints.
-
-And we can still include the `getStaticProps` to retrieve the data on build time.
-
-Let's put this together.
-
-```js
-function Show(show) {
-  return <h1>{show.title}</h1>;
-}
-
-export async function getStaticPaths() {
-  const res = await fetch('https://api.jikan.moe/v3/top/anime/1');
-  const shows = await res.json();
-  const paths = shows.top.map((show) => {
-    return {
-      params: { id: show.mal_id.toString() },
-    };
-  });
-
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }) {
-  const res = await fetch(`https://api.jikan.moe/v3/anime/${params.id}`);
-  const show = await res.json();
-  return { props: show };
-}
-
-export default Show;
-```
-
-Wow, quite a lot going on, right?
-First, we have a simple view to keep things easy. We use an `h1` to return the title of the single page.
-
-Then we use `getStaticPaths` to create a path for each top show.
-We use the `mal_id` to generate unique ID pages.
-
-Then we use the `getStaticProps` function to retrieve these IDs from the URL and fetch the detailed view for each show.
-
-It results in a single page for each show.
-
-![Single page in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1631715374299/92TyD_WIe.png)
-
-And that's it. We now have explored these three ways of creating pages in Next.js.
-I hope you found this helpful article. You can also find the complete code on [GitHub](https://github.com/rebelchris/next-tailwind/tree/pages).
-
-### Thank you for reading, and let's connect!
-
-Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)
+A component by [Espen Hovlandsdal](https://espen.codes/)
