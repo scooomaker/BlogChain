@@ -30,7 +30,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="mail:scooomaker@foxmail.com">
+              <a href="mailto:scooomaker@foxmail.com">
                 <IconContext.Provider value={{size: '1.8em'}}>
                   <AiOutlineMail/>
                 </IconContext.Provider>

@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 import Link from 'next/link';
 import { AiOutlineArrowLeft } from "react-icons/ai";
-
+import { IconContext } from "react-icons";
 
 export async function getStaticPaths() {
   const files = fs.readdirSync('posts');
@@ -32,11 +32,13 @@ export async function getStaticProps({ params: { slug } }) {
 export default function PostPage({ frontmatter, content }) {
   return (
     <div className='prose m-auto px-9 py-10 pad:prose-lg pc:prose-xl 4k:prose-2xl'>
-      <div className='cursor-pointer py-5'>
-        <Link href="/blog/" >
-          <AiOutlineArrowLeft />
-        </Link>
-      </div>
+      <Link href="/blog/" >
+        <div className='sticky top-0 cursor-pointer py-5 backdrop-blur-sm'>
+          <IconContext.Provider value={{ size: '1.4em'}}>
+            <AiOutlineArrowLeft />
+          </IconContext.Provider>
+        </div>
+      </Link>
 
 
       <h1>{frontmatter.title}</h1>
