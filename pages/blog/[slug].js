@@ -2,7 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 import Link from 'next/link';
-import { AiOutlineArrowLeft, AiFillCaretLeft } from "react-icons/ai";
+import { AiOutlineArrowLeft, AiFillCaretLeft ,AiFillLeftCircle,AiFillRightCircle} from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 export async function getStaticPaths() {
@@ -34,28 +34,55 @@ export default function PostPage({ frontmatter, content }) {
     <div className='mx-32 my-24 mobile:mx-8 mobile:my-5'>
 
       <div className='sticky top-0  backdrop-blur-sm py-8 flex'>
-        
-          <IconContext.Provider value={{ size: '3em', className: 'mt-[5px] cursor-pointer' }}>
-            <Link href="/blog/">
+
+        <IconContext.Provider value={{ size: '3em', className: 'mt-[5px] cursor-pointer' }}>
+          <Link href="/blog/">
             <AiOutlineArrowLeft />
           </Link>
-          </IconContext.Provider>
-        
+        </IconContext.Provider>
+
       </div>
 
 
 
 
-      <div className='flex flex-row'>
-        <div>
-          <div className='sticky top-[25%] w-[25%] apple text-black font-bold text-[4vw] pr-16 3xlmin:basis-4/12 3xl:hidden'>
-            {frontmatter.title}
+
+
+      <div className='flex justify-between '>
+
+        <div className='basis-[33%]'>
+          <div className='sticky top-[17%] apple text-black font-bold ml-16'>
+            <div className=' text-[4vw] w-[60%] h-[520px]'>
+              {frontmatter.title}
+            </div>
+            
+            <div className='text-[1.5vw]'>
+              Author: &nbsp; &nbsp; &nbsp; {frontmatter.author}
+            </div>
+
           </div>
         </div>
 
-        <div className='3xlmin:basis-5/12 mt-16 prose pc:prose-2xl 4k:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <div className='basis-[41.6%] pt-16 prose pc:prose-2xl 4k:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        
+        <div className='basis-[20.83%]'>
+          <div className='sticky top-[20%] text-[2vw] apple font-bold text-center'>
+            <div>
+              {frontmatter.date}
+            </div>
+            <div className='h-[65vh]'>
+            </div>
 
-        <div className='3xlmin:basis-3/12'></div>
+            <div className='flex justify-center'>
+              <IconContext.Provider value={{ size: '1em' }}>
+                <AiFillLeftCircle />
+                <span className='w-10'></span>
+                <AiFillRightCircle />
+              </IconContext.Provider>
+            </div>
+          </div>
+        </div>
+
       </div>
 
 
