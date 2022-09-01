@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 
 const bgImg = 'https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg'
@@ -7,8 +6,8 @@ const bgImg = 'https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg'
 function BgImg() {
   return (
       <>
-        <div className='4k:h-[670px] pc:h-96 pad:h-60 mobile:h-40'>
-          <div className='bg-cover bg-no-repeat bg-center h-full' style={{ backgroundImage: `url(${bgImg})` }}>
+        <div className='4k:h-[670px] pc:h-96 pad:h-60 mobile:h-40 '>
+          <div className='bgimg bg-cover bg-no-repeat bg-center h-full ' style={{ backgroundImage: `url(${bgImg})` }}>
         </div>
       </div>
 
