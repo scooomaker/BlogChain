@@ -63,7 +63,7 @@ export default function PostPage({ frontmatter, content }) {
           </div>
         </div>
 
-        <div className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <div className='break-all basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl ' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
         
 
 
