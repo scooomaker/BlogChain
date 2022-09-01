@@ -11,12 +11,15 @@ module.exports = {
       'MrsSheppards': 'Mrs Sheppards, cursive ',
       'MrDafoe': 'Mr Dafoe, cursive',
       'JosefinSans': 'Josefin Sans, sans-serif',
-      'SFProDisplay':["SF Pro Display", "Segoe UI",  "Helvetica Neue", "Noto Sans",  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ],
+      'Satisfy': 'Satisfy, cursive' ,
     },
     extend: {
       
     },
     screens: {
+      '3xl': {'max': '2200px'},
+      '3xlmin': {'min': '2200px'},
+
       '2xl': {'max': '1535px'},
       // => @media (max-width: 1535px) { ... }
 
