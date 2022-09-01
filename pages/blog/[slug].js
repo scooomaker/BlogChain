@@ -51,7 +51,7 @@ export default function PostPage({ frontmatter, content }) {
       <div className='flex justify-between '>
 
         <div className='basis-[33%]'>
-          <div className='sticky top-[17%] apple text-black font-bold ml-16'>
+          <div className='sticky top-[17%] apple text-black font-bold ml-[50px]'>
             <div className=' text-[4vw] w-[60%] h-[520px]'>
               {frontmatter.title}
             </div>
