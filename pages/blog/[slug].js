@@ -52,7 +52,7 @@ export default function PostPage({ frontmatter, content }) {
 
         <div className='basis-[33%]'>
           <div className='sticky top-[17%] apple text-black font-bold ml-[50px]'>
-            <div className=' text-[4vw] w-[60%] h-[520px]'>
+            <div className=' text-[4vw] w-[60%] h-[520px] '>
               {frontmatter.title}
             </div>
             
@@ -63,17 +63,19 @@ export default function PostPage({ frontmatter, content }) {
           </div>
         </div>
 
-        <div className='basis-[41.6%] pt-16 prose pc:prose-2xl 4k:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <div className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl ' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
         
-        <div className='basis-[20.83%]'>
-          <div className='sticky top-[20%] text-[2vw] apple font-bold text-center'>
+
+
+        <div className='basis-[20.83%] 3xl:hidden'>
+          <div className='top-[20%] text-[2vw] apple font-bold text-center'>
             <div>
               {frontmatter.date}
             </div>
             <div className='h-[65vh]'>
             </div>
 
-            <div className='flex justify-center'>
+            <div className='flex justify-center '>
               <IconContext.Provider value={{ size: '1em' }}>
                 <AiFillLeftCircle />
                 <span className='w-10'></span>
@@ -82,6 +84,8 @@ export default function PostPage({ frontmatter, content }) {
             </div>
           </div>
         </div>
+
+        
 
       </div>
 
