@@ -2,7 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 import Link from 'next/link';
-import { AiOutlineArrowLeft, AiFillCaretLeft ,AiFillLeftCircle,AiFillRightCircle} from "react-icons/ai";
+import { AiOutlineArrowLeft, AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 export async function getStaticPaths() {
@@ -34,13 +34,11 @@ export default function PostPage({ frontmatter, content }) {
     <div className='mx-32 my-24 padmax:mx-8 padmax:my-5'>
 
       <div className='sticky top-0 backdrop-blur-sm py-8 padmax:py-4 flex'>
-
         <IconContext.Provider value={{ size: '2em', className: 'mt-[5px] cursor-pointer' }}>
           <Link href="/blog/">
             <AiOutlineArrowLeft />
           </Link>
         </IconContext.Provider>
-
       </div>
 
 
@@ -55,7 +53,7 @@ export default function PostPage({ frontmatter, content }) {
             <div className=' text-[4vw] w-[60%] h-[520px] '>
               {frontmatter.title}
             </div>
-            
+
             <div className='text-[1.5vw]'>
               Author: &nbsp; &nbsp; &nbsp; {frontmatter.author}
             </div>
@@ -63,8 +61,8 @@ export default function PostPage({ frontmatter, content }) {
           </div>
         </div>
 
-        <div className='break-all basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl ' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-        
+        <div className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+
 
 
         <div className='basis-[20.83%] 3xl:hidden'>
@@ -85,7 +83,7 @@ export default function PostPage({ frontmatter, content }) {
           </div>
         </div>
 
-        
+
 
       </div>
 
