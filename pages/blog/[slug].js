@@ -33,9 +33,9 @@ export default function PostPage({ frontmatter, content }) {
   return (
     <div className='mx-32 my-24 padmax:mx-8 padmax:my-5'>
 
-      <div className='sticky top-0  backdrop-blur-sm py-8 flex'>
+      <div className='sticky top-0 backdrop-blur-sm py-8 padmax:py-4 flex'>
 
-        <IconContext.Provider value={{ size: '3em', className: 'mt-[5px] cursor-pointer' }}>
+        <IconContext.Provider value={{ size: '2em', className: 'mt-[5px] cursor-pointer' }}>
           <Link href="/blog/">
             <AiOutlineArrowLeft />
           </Link>
