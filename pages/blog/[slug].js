@@ -31,7 +31,7 @@ export async function getStaticProps({ params: { slug } }) {
 
 export default function PostPage({ frontmatter, content }) {
   return (
-    <div className='mx-32 my-24 mobile:mx-8 mobile:my-5'>
+    <div className='mx-32 my-24 padmax:mx-8 padmax:my-5'>
 
       <div className='sticky top-0  backdrop-blur-sm py-8 flex'>
 
@@ -48,10 +48,10 @@ export default function PostPage({ frontmatter, content }) {
 
 
 
-      <div className='flex justify-between '>
+      <div className='flex justify-between padmax:justify-center'>
 
-        <div className='basis-[33%]'>
-          <div className='sticky top-[17%] apple text-black font-bold ml-[50px]'>
+        <div className='basis-[33%] padmax:hidden'>
+          <div className='sticky top-[17%] apple text-black font-bold ml-[50px] 3xl:ml-0'>
             <div className=' text-[4vw] w-[60%] h-[520px] '>
               {frontmatter.title}
             </div>
@@ -63,7 +63,7 @@ export default function PostPage({ frontmatter, content }) {
           </div>
         </div>
 
-        <div className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl ' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <div className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
         
 
 

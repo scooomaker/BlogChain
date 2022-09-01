@@ -41,7 +41,9 @@ module.exports = {
 
       'mobile': {'max': '425px'},
       // => @media (max-width: 420px) { ... }
-      'pad': {'min': '426px', 'max': '1278px'},
+      'pad': { 'min': '426px', 'max': '1278px' },
+      'padmax': {'max': '1278px'},
+      
       // => @media (min-width: 421px and max-width: 1024px) { ... }
       'pc': { 'min': '1279px', 'max': '2559px' },
       
