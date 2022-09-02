@@ -15,6 +15,7 @@ module.exports = {
       'Satisfy': 'Satisfy, cursive' ,
     },
     extend: {
+   
       
     },
     screens: {

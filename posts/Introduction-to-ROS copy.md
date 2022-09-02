@@ -9,7 +9,30 @@ tags:
   - ROS
 ---
 
+Lorem ipsum dolor sit  amet consectetur adipisicing elit.
+Lorem ipsum dolor sit  amet consectetur adipisicing elit.
 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut assumenda distinctio eveniet quos, saepe non quasi minus facere iste odit! Accusamus eos optio, a recusandae neque aliquam provident illum?
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut assumenda distinctio eveniet quos, saepe non quasi minus facere iste odit! Accusamus eos optio, a recusandae neque aliquam provident illum?
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut assumenda distinctio eveniet quos, saepe non quasi minus facere iste odit! Accusamus eos optio, a recusandae neque aliquam provident illum?
+
+<div class="note">
+
+Some *emphasis* and <strong>strong</strong>!
+
+</div>
+
+```html
+<div class="note">
+
+Some *emphasis* and <strong>strong</strong>!
+
+</div>
+```
 
 > 　　　　ROS可以形象的描述为一个工厂的运行机制，创建好一个工作空间(workspace)就像一个工厂，工厂里又有好多个生产车间，每个功能包（pkg）看作是一个生产车间，每个生产车间又有好多工人在配合，每个节点（node）看作是一个工人，节点是又是可执行程序的最小单位，工人们之间相互沟通通过消息（mesage）来完成.
 
@@ -256,10 +279,11 @@ GFM a-tail link [@pandao](https://my.oschina.net/u/3691274)  邮箱地址自动�
     
 预格式化文本：
 
-    | First Header  | Second Header |
-    | ------------- | ------------- |
-    | Content Cell  | Content Cell  |
-    | Content Cell  | Content Cell  |
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 
 #### JS代码　
 
@@ -472,15 +496,14 @@ $$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
 
 多行公式：
 
-```math
-\displaystyle
-\left( \sum\_{k=1}^n a\_k b\_k \right)^2
-\leq
-\left( \sum\_{k=1}^n a\_k^2 \right)
-\left( \sum\_{k=1}^n b\_k^2 \right)
 ```
-
-```katex
+displaystyle
+left( \sum\_{k=1}^n a\_k b\_k \right)^2
+leq
+left( \sum\_{k=1}^n a\_k^2 \right)
+left( \sum\_{k=1}^n b\_k^2 \right)
+```
+```
 \displaystyle 
     \frac{1}{
         \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
@@ -491,8 +514,7 @@ $$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
         } 
     }
 ```
-
-```latex
+```
 f(x) = \int_{-\infty}^\infty
     \hat f(\xi)\,e^{2 \pi i \xi x}
     \,d\xi

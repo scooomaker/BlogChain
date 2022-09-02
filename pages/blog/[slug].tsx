@@ -13,7 +13,10 @@ import {
   dracula,
   prism,
 } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import rehypeRaw from 'rehype-raw'
+import 'katex/dist/katex.min.css'
 
 
 import Link from 'next/link';
@@ -82,10 +85,11 @@ export default function PostPage({ frontmatter, content }: any) {
 
         
 
-        <div className="prose">
+        <div className="prose  dark:prose-invert">
           <ReactMarkdown
             className='basis-[41.6%] 3xl:basis-[77%] mt-8 '
-            remarkPlugins={[remarkGfm]}
+            remarkPlugins={[remarkMath ,remarkGfm ]}
+            rehypePlugins={[rehypeKatex ,rehypeRaw]}
             components={{
               code({ node, inline, className, children, ...props }: any) {
                 const match = /language-(\w+)/.exec(className || '');
