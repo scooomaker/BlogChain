@@ -19,6 +19,8 @@ import rehypeRaw from 'rehype-raw'
 import 'katex/dist/katex.min.css'
 
 
+
+
 import Link from 'next/link';
 import { AiOutlineArrowLeft, AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
@@ -85,11 +87,11 @@ export default function PostPage({ frontmatter, content }: any) {
 
         
 
-        <div className="prose  dark:prose-invert">
+        <div className="prose dark:prose-invert">
           <ReactMarkdown
             className='basis-[41.6%] 3xl:basis-[77%] mt-8 '
             remarkPlugins={[remarkMath ,remarkGfm ]}
-            rehypePlugins={[rehypeKatex ,rehypeRaw]}
+            rehypePlugins={[rehypeKatex, rehypeRaw ]}
             components={{
               code({ node, inline, className, children, ...props }: any) {
                 const match = /language-(\w+)/.exec(className || '');
