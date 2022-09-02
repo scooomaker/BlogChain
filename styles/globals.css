@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer utilities {
-  
+  .colorchange{
+    @apply dark:bg-[#101010] dark:text-white;
+  }
+  /* .darknav{
+    @apply dark:bg-zinc-900 dark:text-white;
+  } */
+
   .discript-text {
     overflow: hidden;
     display: -webkit-box;

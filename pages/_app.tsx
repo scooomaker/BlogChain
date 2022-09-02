@@ -5,14 +5,16 @@ import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className='colorchange'>
       
       <Head>
         <link rel="icon" href="../public/favicon.ico" />
       </Head>
-      < Component {...pageProps} />
+      
+        < Component {...pageProps} />
+      
       <Footer />
-    </>
+    </div>
 
   )
     

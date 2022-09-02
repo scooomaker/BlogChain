@@ -1,10 +1,7 @@
-import { Fragment } from 'react'
-import { AppProps } from 'next/app';
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-import { AiOutlineHome } from 'react-icons/ai'
-import { BiHome } from 'react-icons/bi'
-
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { CgDarkMode } from "react-icons/cg";
+import { IconContext } from "react-icons";
 
 
 function classNames(...classes: string[]) {
@@ -14,31 +11,40 @@ function classNames(...classes: string[]) {
 const logo = "https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
 const profile_img = '/images/sea1.png'
 // we must uses /images/xxx.png to change img 
+let switchdark: boolean = false;
 
-
-export default function Navbar(props: { name: string }) {
-  let cur1 = false, cur2 = false, cur3 = false, cur4 = false;
-  let name:string;
-  switch (props.name) {
-    case 'index': cur1 = true; name = 'home'; break;
-    case 'blog': cur2 = true;name = 'blog'; break;
-    case 'friends': cur3 = true;name = 'friends'; break;
-    case 'project': cur4 = true; name = 'project';break;
-    default:break;
-  }
+export default function Navbar() {
+  // let cur1 = false, cur2 = false, cur3 = false, cur4 = false;
+  // let name: string;
+  // switch (props.name) {
+  //   case 'index': cur1 = true; name = 'home'; break;
+  //   case 'blog': cur2 = true; name = 'blog'; break;
+  //   case 'friends': cur3 = true; name = 'friends'; break;
+  //   case 'project': cur4 = true; name = 'project'; break;
+  //   default: break;
+  // }
 
 
   const navigation = [
-    { name: 'Home', href: '/', current: cur1 },
-    { name: 'Blog', href: '/blog/', current: cur2 },
-    { name: 'Friends', href: '/friends', current: cur3 },
-    { name: 'Project', href: '/project', current: cur4 },
+    { name: 'Home', href: '/'},
+    { name: 'Blog', href: '/blog/'},
+    { name: 'Friends', href: '/friends'},
+    { name: 'Project', href: '/project'},
   ]
+
+
+  // let mediadark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // if (mediadark)
+  // {
+  //   document.documentElement.classList.add('dark');
+  //   switchdark = true;
+  // }
+  // const toggleSwitch = document.querySelector();
 
 
   return (
 
-    <Disclosure as="nav" className="bg-stone-50 sticky top-0 z-40">
+    <Disclosure as="nav" className="colorchange sticky top-0 z-40 bg-stone-50 ">
       {({ open }) => (
         <>
           <div className="mx-auto px-2">
@@ -48,7 +54,8 @@ export default function Navbar(props: { name: string }) {
                 {/* image here */}
                 <div className="flex-shrink-0 flex items-center">
                   <div className='uppercase  text-[35px] font-JosefinSans mb-0 pb-0 pt-2 mobile:text-[20px] pad:text-[28px] select-none'>
-                    {name}
+                    {/* {name} */}
+                    scooo
                   </div>
                   {/* <imgont-bold
                     className="block h-8 w-auto"
@@ -67,10 +74,9 @@ export default function Navbar(props: { name: string }) {
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? ' text-black' : 'text-slate-500',
-                        'navfunc uppercase text-[30px] font-thin pad:text-[25px]'
+                         'text-slate-500 navfunc uppercase text-[30px] font-thin pad:text-[25px]'
                       )}
-                      aria-current={item.current ? 'page' : undefined}
+                      // aria-current={item.current ? 'page' : undefined}
                     >
                       {item.name}
                     </Disclosure.Button>
@@ -95,6 +101,21 @@ export default function Navbar(props: { name: string }) {
               </Disclosure.Button>
 
 
+              <div className='cursor-pointer' onClick={() => {
+                if (switchdark == false) {
+                  document.documentElement.classList.add('dark');
+                  switchdark = true;
+                } else {
+                  document.documentElement.classList.remove('dark');
+                  switchdark = false;
+                }
+              }}
+
+              >
+                <IconContext.Provider value={{ size: '2.2em' }}>
+                  <CgDarkMode />
+                </IconContext.Provider>
+              </div>
 
 
             </div>
@@ -111,10 +132,9 @@ export default function Navbar(props: { name: string }) {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? ' text-black' : 'text-slate-500',
-                    'block px-3 py-2 rounded-md text-base ml-12 mr-12 uppercase mobile:ml-3'
+                    'text-slate-500 block px-3 py-2 rounded-md text-base ml-12 mr-12 uppercase mobile:ml-3'
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  // aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
