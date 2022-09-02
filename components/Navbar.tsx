@@ -27,10 +27,11 @@ export default function Navbar() {
 
 
   const navigation = [
-    { name: 'Home', href: '/'},
+    { name: 'Home', href: '/' },
+    { name: 'Ins', href: '/ins'},  
     { name: 'Blog', href: '/blog/'},
     { name: 'Friends', href: '/friends'},
-    { name: 'Project', href: '/project'},
+    { name: 'Project', href: '/project' },   
   ]
 
 

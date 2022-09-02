@@ -1,6 +1,21 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import md from 'markdown-it';
+// import md from 'markdown-it';
+
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+// import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {
+  dark,
+  dracula,
+  prism,
+} from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
+
+
 import Link from 'next/link';
 import { AiOutlineArrowLeft, AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
@@ -18,7 +33,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params: { slug } }:any) {
   const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return {
@@ -29,7 +44,7 @@ export async function getStaticProps({ params: { slug } }) {
   };
 }
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content }: any) {
   return (
     <div className='mx-32 my-24 padmax:mx-8 padmax:my-5'>
 
@@ -49,7 +64,7 @@ export default function PostPage({ frontmatter, content }) {
       <div className='flex justify-between padmax:justify-center'>
 
         <div className='basis-[33%] padmax:hidden'>
-          <div className='sticky top-[17%] apple text-black font-bold ml-[50px] 3xl:ml-0'>
+          <div className='sticky top-[17%] apple text-black dark:text-white font-bold ml-[50px] 3xl:ml-0'>
             <div className=' text-[4vw] w-[60%] h-[520px] '>
               {frontmatter.title}
             </div>
@@ -61,7 +76,38 @@ export default function PostPage({ frontmatter, content }) {
           </div>
         </div>
 
-        <div className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        {/* <div className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} /> */}
+
+        {/* <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl' /> */}
+
+        
+
+        <div className="prose">
+          <ReactMarkdown
+            className='basis-[41.6%] 3xl:basis-[77%] mt-8 '
+            remarkPlugins={[remarkGfm]}
+            components={{
+              code({ node, inline, className, children, ...props }: any) {
+                const match = /language-(\w+)/.exec(className || '');
+                return !inline && match ? (
+                  <SyntaxHighlighter
+                    style={dracula} // try passing different color schemes, drak, dracula etc.
+                    language={match[1]}
+                    PreTag="div"
+                    {...props}
+                  >
+                    {String(children).replace(/\n$/, '')}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code>{children}</code>
+                );
+              },
+            }}
+          >
+            {content}
+          </ReactMarkdown>
+        </div>
+
 
 
 
