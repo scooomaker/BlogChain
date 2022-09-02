@@ -13,6 +13,7 @@ const profile_img = '/images/sea1.png'
 // we must uses /images/xxx.png to change img 
 let switchdark: boolean = false;
 
+
 export default function Navbar() {
   // let cur1 = false, cur2 = false, cur3 = false, cur4 = false;
   // let name: string;

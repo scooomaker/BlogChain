@@ -34,7 +34,6 @@ export async function getStaticProps() {
 export default function Blog({ posts }) {
   return (
     <>
-      <Navbar name="blog" />
       <BgImg />
       <LittleNav />
 

@@ -7,8 +7,7 @@ const Home: NextPage = () => {
   return (
     <>
 
-      {/* <div className=''> */}
-      <Navbar/>
+  
       
         {/* <video autoPlay loop muted playsInline className='absolute w-full h-full object-cover z-0'>
           <source src='/video/video.mp4' />
@@ -19,7 +18,6 @@ const Home: NextPage = () => {
           <div className=''> Hi, I am scooo.</div>
 
         </div>
-      {/* </div> */}
 
     </>
 

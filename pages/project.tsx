@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 function project() {
     return (
         <>
-            <Navbar />
             <main className='h-screen'>
                 <div className="max-w-[1200px] mx-auto apple text-[48px] py-[5vh] px-[8vw] font-bold">
                     Project
