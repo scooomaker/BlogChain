@@ -51,6 +51,7 @@ export async function getStaticProps({ params: { slug } }:any) {
 
 export default function PostPage({ frontmatter, content }: any) {
   return (
+    // padmax:mx-8 padmax:my-5
     <div className='mx-32 my-24 padmax:mx-8 padmax:my-5'>
 
       <div className='sticky top-0 backdrop-blur-sm py-8 padmax:py-4 flex'>
@@ -87,7 +88,7 @@ export default function PostPage({ frontmatter, content }: any) {
 
         
 
-        <div className="prose dark:prose-invert">
+        <div className="prose xlmin:prose-2xl dark:prose-invert">
           <ReactMarkdown
             className='basis-[41.6%] 3xl:basis-[77%] mt-8 '
             remarkPlugins={[remarkMath ,remarkGfm ]}
