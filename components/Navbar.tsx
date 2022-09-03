@@ -33,7 +33,7 @@ export default function Navbar(props: any) {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Ins', href: '/ins' },
+    { name: 'Ins', href: '/ins/' },
     { name: 'Blog', href: '/blog/' },
     { name: 'Friends', href: '/friends' },
     { name: 'Project', href: '/project' },
