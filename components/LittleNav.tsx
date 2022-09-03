@@ -21,7 +21,7 @@ const profileImg = '/images/sea1.png'
 function LittleNav() {
   return (
     <>
-      <Disclosure as="nav" className="bg-stone-50 shadow-md">
+      <Disclosure as="nav" className="bg-stone-50 shadow-md dark:bg-black">
         {() => (
           <>
 

@@ -62,7 +62,7 @@ export default function Blog({ posts }:any) {
             {posts.map(({ slug, frontmatter }:any) => (
 
               <>
-                <div key={slug} className="h-[270px] rounded-[15px] mt-16 bg-stone-50 drop-shadow-xl ">
+                <div key={slug} className="h-[270px] rounded-[15px] mt-16 bg-stone-50 drop-shadow-xl dark:bg-black">
                   <Link href={`/blog/${slug}`}>
                       <div className='pt-5 pl-5 pr-2 pb-5 cursor-pointer'>
                         <h1 className='text-3xl truncate'>{frontmatter.title}</h1>
@@ -85,7 +85,7 @@ export default function Blog({ posts }:any) {
 
 
         {/* right lan  */}
-        <div className="basis-3/12 mt-3 bg-stone-50 drop-shadow-xl rounded-lg mx-8 pb-8 h-min">
+        <div className="basis-3/12 mt-3 bg-stone-50 dark:bg-black drop-shadow-xl rounded-lg mx-8 pb-8 h-min">
 
           <div className='m-auto p-auto '>
             <div className='text-3xl font-medium ml-5 mt-6 mb-2'>Your Tweet activity</div>
