@@ -7,7 +7,7 @@ function Footer() {
   return (
     <>
       {/* grid mobile:grid-cols-1 pad:grid-cols-2  grid-cols-3 gap-3 */}
-      <footer className='bg-black  text-white py-[40px]'>
+      <footer className='bg-black  text-white py-[40px] w-screen'>
         <div className='max-w-[1000px]  mx-auto px-7 justify-between flex sm:block sm:text-center'>
 
           <p>© 2022. All rights reserved by scooo.</p>

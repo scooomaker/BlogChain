@@ -38,9 +38,10 @@ module.exports = {
       
     },
     screens: {
-      '3xl': {'max': '1830px'},
-      '3xlmin': {'min': '1830px'},
+      '3xl': {'max': '1900px'},
+      '3xlmin': {'min': '1900px'},
 
+      'max1600': {'max': '1600px'},
       '2xl': {'max': '1535px'},
       // => @media (max-width: 1535px) { ... }
 
@@ -58,12 +59,16 @@ module.exports = {
       // => @media (max-width: 767px) { ... }
 
       'sm': { 'max': '639px' },
+      'smmin': { 'min': '639px' },
+
       // => @media (max-width: 639px) { ... }
 
       'mobile': {'max': '425px'},
       // => @media (max-width: 420px) { ... }
       'pad': { 'min': '426px', 'max': '1278px' },
-      'padmax': {'max': '1278px'},
+      'padmax': { 'max': '1278px' },
+      'padmin': {'min': '1278px'},
+      
       
       // => @media (min-width: 421px and max-width: 1024px) { ... }
       'pc': { 'min': '1279px', 'max': '2559px' },

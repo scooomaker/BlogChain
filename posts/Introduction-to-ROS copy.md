@@ -125,7 +125,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut assumenda distin
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut assumenda distinctio eveniet quos, saepe non quasi minus facere iste odit! Accusamus eos optio, a recusandae neque aliquam provident illum?
 
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut assumenda distinctio eveniet quos, saepe non quasi minus facere iste odit! Accusamus eos optio, a recusandae neque aliquam provident illum?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut assumenda distinctio eveniet quos, saepe non quasi minus facere iste odit! Accusamus eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?eos optio, a recusandae neque aliquam provident illum?
 
 <div class="note">
 
@@ -136,7 +136,7 @@ Some *emphasis* and <strong>strong</strong>!
 ```html
 <div class="note">
 
-Some *emphasis* and <strong>strong</strong>!
+Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!Some *emphasis* and <strong>strong</strong>!
 
 </div>
 ```
@@ -599,29 +599,40 @@ $$x > y$$
 
 $$\(\sqrt{3x-1}+(1+x)^2\)$$
                     
-$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
+$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$ $$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
 
 多行公式：
 
-```
+
+
 displaystyle
-left( \sum\_{k=1}^n a\_k b\_k \right)^2
+left( \sum\_{k=1}^n a\_k
+ b\_k \right)^2
 leq
-left( \sum\_{k=1}^n a\_k^2 \right)
-left( \sum\_{k=1}^n b\_k^2 \right)
-```
-```
+left( \sum\_{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2
+ \right){k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2
+left( \sum\_{k=1}^n b\_k^{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2
+2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)2 \rig{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2{k=1}^n a\_k^2ht)
+
+
+```math
 \displaystyle 
     \frac{1}{
-        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
-        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
-        1+\frac{e^{-6\pi}}
+        \Bigl(\sqrt{\phi \
+        sqrt{
+          5}}-\phi\Bigr) e^{
+
+        \frac25 \pi}} = 1
+        +\frac{e^{-2\
+        
+        pi}} {1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e{1+\frac{e
         {1+\frac{e^{-8\pi}}
          {1+\cdots} }
         } 
     }
 ```
-```
+
+```math
 f(x) = \int_{-\infty}^\infty
     \hat f(\xi)\,e^{2 \pi i \xi x}
     \,d\xi

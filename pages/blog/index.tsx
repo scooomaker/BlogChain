@@ -38,7 +38,7 @@ export default function Blog({ posts }:any) {
       <LittleNav />
 
       {/* > xl  */}
-      <div className="flex flex-row subpixel-antialiased max-w-[2300px]  mx-auto xl:hidden">
+      <div className="flex flex-row subpixel-antialiased max-w-[2300px]  mx-auto h-screen xl:hidden">
         {/* left lan  */}
         <div className="basis-3/12 spc:basis-4/12 m-8 pl-36 pt-16 pr-10">
           <div className='spc:pl-20'>

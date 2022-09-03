@@ -115,7 +115,7 @@ export default function PostPage({ frontmatter, content }: any) {
 
 
         <div className='padmax:flex-initial basis-[20.83%] 3xl:hidden'>
-          <div className='top-[20%] text-[2vw] apple font-bold text-center'>
+          <div className='sticky top-[20%] text-[2vw] apple font-bold text-center'>
             <div>
               {frontmatter.date}
             </div>
