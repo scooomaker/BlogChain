@@ -10,7 +10,8 @@ const Home: NextPage = () => {
 
       <div className='flex h-screen'>
         <video autoPlay loop muted playsInline className='absolute w-full h-full object-cover z-0'>
-          <source src='/video/video.mp4' />
+          {/* <source src='/video/video.mp4' /> */}
+          <source src="/video/video.webm" type="video/webm; codecs=vp9" />
         </video>
 
 

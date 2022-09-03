@@ -1,11 +1,8 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-// import md from 'markdown-it';
 
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-// import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {
@@ -19,13 +16,10 @@ import rehypeRaw from 'rehype-raw'
 import 'katex/dist/katex.min.css'
 
 
-
-
 import Link from 'next/link';
 import { AiOutlineArrowLeft, AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
-import Navbar from '../../components/Navbar';
-import Image from 'next/image';
+
 
 export async function getStaticPaths() {
   const files = fs.readdirSync('posts');
@@ -52,32 +46,6 @@ export async function getStaticProps({ params: { slug } }: any) {
 }
 
 export default function PostPage({ frontmatter, content }: any) {
-  // const customerComponents = {
-  //   p(paragraph: { children?: any; node?: any; }) {
-  //     const { node } = paragraph;
-
-  //     if (node.children[0].tagName === "img") {
-  //       const img = node.children[0].properties;
-
-  //       return (
-  //         <div>
-  //           <Image
-  //             src={img.src}
-  //             alt={img.alt}
-  //             width="100%"
-  //             height="100%"
-  //             layout="responsive"
-  //             objectFit="contain"
-  //           />
-  //         </div>
-  //       );
-  //     }
-
-  //     return <p>{paragraph.children}</p>;
-  //   },
-  // };
-
-
 
   return (
     // padmax:mx-8 padmax:my-5
