@@ -57,12 +57,12 @@ export default function Blog({ posts }:any) {
 
         {/* center lan  */}
         <div className="basis-6/12 spc:basis-5/12 mt-3 h-full  apple">
-          <div className='flex flex-col'>
+          <div className='flex flex-col max-w-[800px]'>
 
             {posts.map(({ slug, frontmatter }:any) => (
 
               <>
-                <div key={slug} className="h-[270px] rounded-[15px] mt-16 bg-stone-50 drop-shadow-xl">
+                <div key={slug} className="h-[270px] rounded-[15px] mt-16 bg-stone-50 drop-shadow-xl ">
                   <Link href={`/blog/${slug}`}>
                       <div className='pt-5 pl-5 pr-2 pb-5 cursor-pointer'>
                         <h1 className='text-3xl truncate'>{frontmatter.title}</h1>
@@ -113,10 +113,10 @@ export default function Blog({ posts }:any) {
         {
           posts.map(({ slug, frontmatter }:any) => (
 
-            <div key={slug} className="h-52 pt-5 pl-5 pr-2 pb-5  mt-3 bg-stone-50 drop-shadow-xl rounded-lg mx-2 ">
+            <div key={slug} className="h-52 pt-5 pl-5 pr-2 pb-5  mt-3 bg-stone-50 drop-shadow-xl rounded-lg mx-2">
               <Link href={`/blog/${slug}`}>
                 <div className='h-52 pl-2 pr-2 pb-5 cursor-pointer'>
-                  <h1 className='text-3xl truncate'>{frontmatter.title}</h1>
+                  <h1 className='text-3xl truncate '>{frontmatter.title}</h1>
                   <div className='font-serif truncate'>{frontmatter.date}</div>
                   <hr />
                   <div className='h-[105px] font-light px-3 pt-2 indent-8 discript-text-mobile'>

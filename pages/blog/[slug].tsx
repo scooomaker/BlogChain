@@ -25,6 +25,7 @@ import Link from 'next/link';
 import { AiOutlineArrowLeft, AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Navbar from '../../components/Navbar';
+import Image from 'next/image';
 
 export async function getStaticPaths() {
   const files = fs.readdirSync('posts');
@@ -51,6 +52,33 @@ export async function getStaticProps({ params: { slug } }: any) {
 }
 
 export default function PostPage({ frontmatter, content }: any) {
+  // const customerComponents = {
+  //   p(paragraph: { children?: any; node?: any; }) {
+  //     const { node } = paragraph;
+
+  //     if (node.children[0].tagName === "img") {
+  //       const img = node.children[0].properties;
+
+  //       return (
+  //         <div>
+  //           <Image
+  //             src={img.src}
+  //             alt={img.alt}
+  //             width="100%"
+  //             height="100%"
+  //             layout="responsive"
+  //             objectFit="contain"
+  //           />
+  //         </div>
+  //       );
+  //     }
+
+  //     return <p>{paragraph.children}</p>;
+  //   },
+  // };
+
+
+
   return (
     // padmax:mx-8 padmax:my-5
     <>
@@ -73,13 +101,13 @@ export default function PostPage({ frontmatter, content }: any) {
 
           <div className='padmax:flex-initial basis-[33%] 2xl:hidden'>
             <div className='sticky top-[17%] apple text-black dark:text-white font-bold ml-[50px] 3xl:ml-0'>
-              <div className=' text-[4vw] w-[60%] h-[520px] '>
+              <div className='text-[2.5vw] w-[75%] h-[520px] leadi'>
                 {frontmatter.title}
               </div>
 
-              <div className='text-[1.5vw]'>
+              {/* <div className='text-[1.5vw]'>
                 Author: &nbsp; &nbsp; &nbsp; {frontmatter.author}
-              </div>
+              </div> */}
 
             </div>
           </div>
@@ -96,7 +124,7 @@ export default function PostPage({ frontmatter, content }: any) {
                   const match = /language-(\w+)/.exec(className || '');
                   return !inline && match ? (
                     <SyntaxHighlighter
-                      style={dracula} // try passing different color schemes, drak, dracula etc.
+                      style={dracula} // try passing different color schemes, dark, prism,dracula etc.
                       language={match[1]}
                       PreTag="div"
                       {...props}
@@ -107,6 +135,7 @@ export default function PostPage({ frontmatter, content }: any) {
                     <code>{children}</code>
                   );
                 },
+                       
               }}
             >
               {content}
