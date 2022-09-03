@@ -34,6 +34,7 @@ export async function getStaticProps() {
 export default function Blog({ posts }:any) {
   return (
     <>
+      <Navbar name='blog' />
       <BgImg />
       <LittleNav />
 
@@ -107,7 +108,7 @@ export default function Blog({ posts }:any) {
 
 
       {/* < xl  */}
-      <div className="xlmin:hidden space-y-7">
+      <div className="xlmin:hidden space-y-7 h-screen">
 
         {
           posts.map(({ slug, frontmatter }:any) => (

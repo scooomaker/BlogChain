@@ -1,10 +1,12 @@
 import type { NextPage } from 'next'
+import Navbar from '../components/Navbar'
 
 
 
 const Home: NextPage = () => {
   return (
     <>
+      <Navbar name='index' />
 
       <div className='flex'>
         <video autoPlay loop muted playsInline className='absolute w-full h-full object-cover z-0'>

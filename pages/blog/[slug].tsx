@@ -24,6 +24,7 @@ import 'katex/dist/katex.min.css'
 import Link from 'next/link';
 import { AiOutlineArrowLeft, AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import Navbar from '../../components/Navbar';
 
 export async function getStaticPaths() {
   const files = fs.readdirSync('posts');
@@ -52,9 +53,10 @@ export async function getStaticProps({ params: { slug } }:any) {
 export default function PostPage({ frontmatter, content }: any) {
   return (
     // padmax:mx-8 padmax:my-5
-    <div className=' mx-32 my-24 padmax:mx-8 padmax:my-5'>
-
-      <div className='flex sticky top-0 backdrop-blur-sm py-8 padmax:py-4 '>
+    <>
+       <div className=' mx-32 my-24 padmax:mx-8 padmax:my-5'>
+      
+      <div className='flex sticky top-0 backdrop-blur-sm py-8 padmax:py-4 z-100'>
         <IconContext.Provider value={{ size: '2em', className: 'mt-[5px] cursor-pointer' }}>
           <Link href="/blog/">
             <AiOutlineArrowLeft />
@@ -138,6 +140,9 @@ export default function PostPage({ frontmatter, content }: any) {
 
 
     </div>
+    </>
+    
+   
 
 
   );

@@ -1,6 +1,9 @@
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { CgDarkMode } from "react-icons/cg";
+
+import Link from 'next/link';
+import { AiOutlineArrowLeft, AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 
@@ -14,24 +17,26 @@ const profile_img = '/images/sea1.png'
 let switchdark: boolean = false;
 
 
-export default function Navbar() {
-  // let cur1 = false, cur2 = false, cur3 = false, cur4 = false;
-  // let name: string;
-  // switch (props.name) {
-  //   case 'index': cur1 = true; name = 'home'; break;
-  //   case 'blog': cur2 = true; name = 'blog'; break;
-  //   case 'friends': cur3 = true; name = 'friends'; break;
-  //   case 'project': cur4 = true; name = 'project'; break;
-  //   default: break;
-  // }
+export default function Navbar(props: any) {
+  let cur1 = false, cur2 = false, cur3 = false, cur4 = false ,cur5 = false; 
+  let name: string;
+  switch (props.name) {
+    case 'index': cur1 = true; name = 'home'; break;
+    case 'ins': cur2 = true; name = 'ins'; break;
+    case 'blog': cur3 = true; name = 'blog'; break;
+    case 'friends': cur4 = true; name = 'friends'; break;
+    case 'project': cur5 = true; name = 'project'; break;
+    case 'slug':  name = ''; break;
+    default: break;
+  }
 
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Ins', href: '/ins'},  
-    { name: 'Blog', href: '/blog/'},
-    { name: 'Friends', href: '/friends'},
-    { name: 'Project', href: '/project' },   
+    { name: 'Ins', href: '/ins' },
+    { name: 'Blog', href: '/blog/' },
+    { name: 'Friends', href: '/friends' },
+    { name: 'Project', href: '/project' },
   ]
 
 
@@ -46,7 +51,9 @@ export default function Navbar() {
 
   return (
 
-    <Disclosure as="nav" className="colorchange sticky top-0 z-40 bg-stone-50 ">
+    // backdrop-blur-sm
+    // sticky top-0
+    <Disclosure as="nav" className="colorchange  z-0 backdrop-blur-sm  ">
       {({ open }) => (
         <>
           <div className="mx-auto px-2">
@@ -56,8 +63,7 @@ export default function Navbar() {
                 {/* image here */}
                 <div className="flex-shrink-0 flex items-center">
                   <div className='uppercase  text-[35px] font-JosefinSans mb-0 pb-0 pt-2 mobile:text-[20px] pad:text-[28px] select-none'>
-                    {/* {name} */}
-                    scooo
+                    {name}
                   </div>
                   {/* <imgont-bold
                     className="block h-8 w-auto"
@@ -69,16 +75,16 @@ export default function Navbar() {
 
 
               <Disclosure.Panel className="lg:hidden">
-                <div className=''>
+                <div>
                   {navigation.map((item) => (
                     <Disclosure.Button
                       key={item.name}
                       as="a"
                       href={item.href}
                       className={classNames(
-                         'text-slate-500 navfunc uppercase text-[30px] font-thin pad:text-[25px]'
+                        'text-slate-500 navfunc uppercase text-[30px] font-thin pad:text-[25px]'
                       )}
-                      // aria-current={item.current ? 'page' : undefined}
+                    // aria-current={item.current ? 'page' : undefined}
                     >
                       {item.name}
                     </Disclosure.Button>
@@ -126,8 +132,8 @@ export default function Navbar() {
 
 
 
-          <Disclosure.Panel className="absolute lgmin:hidden">
-            <div className="w-screen  space-y-3 h-[200px] z-auto bg-stone-50  navmap ">
+          <Disclosure.Panel className="absolute  lgmin:hidden">
+            <div className="w-screen  space-y-3 z-auto h-[200px]  bg-stone-50  navmap ">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -136,7 +142,7 @@ export default function Navbar() {
                   className={classNames(
                     'text-slate-500 block px-3 py-2 rounded-md text-base ml-12 mr-12 uppercase mobile:ml-3'
                   )}
-                  // aria-current={item.current ? 'page' : undefined}
+                // aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
