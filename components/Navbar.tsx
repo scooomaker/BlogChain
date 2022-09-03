@@ -53,13 +53,16 @@ export default function Navbar(props: any) {
 
     // backdrop-blur-sm
     // sticky top-0
-    <Disclosure as="nav" className="colorchange  z-0 backdrop-blur-sm  ">
+    
+    <Disclosure as="nav" className="sticky top-0 colorchange z-[200] bg-white">
       {({ open }) => (
         <>
           <div className="mx-auto px-2">
-            <div className="relative flex items-center justify-end mobile:h-[80px] pad:h-[100px] pc:h-[120px] 4k:h-[150px]">
+            <div className="relative flex items-center justify-end
+            ">
+              {/* mobile:h-[80px] pad:h-[100px] pc:h-[120px] 4k:h-[150px] */}
 
-              <div className="flex-1 flex items-center justify-start m-12 mobile:m-3">
+              <div className="flex-1 flex items-center justify-start py-[20px] mx-9">
                 {/* image here */}
                 <div className="flex-shrink-0 flex items-center">
                   <div className='uppercase  text-[35px] font-JosefinSans mb-0 pb-0 pt-2 mobile:text-[20px] pad:text-[28px] select-none'>
