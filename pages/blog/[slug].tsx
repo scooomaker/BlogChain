@@ -52,9 +52,9 @@ export async function getStaticProps({ params: { slug } }:any) {
 export default function PostPage({ frontmatter, content }: any) {
   return (
     // padmax:mx-8 padmax:my-5
-    <div className='mx-32 my-24 padmax:mx-8 padmax:my-5'>
+    <div className=' mx-32 my-24 padmax:mx-8 padmax:my-5'>
 
-      <div className='sticky top-0 backdrop-blur-sm py-8 padmax:py-4 flex'>
+      <div className='flex sticky top-0 backdrop-blur-sm py-8 padmax:py-4 '>
         <IconContext.Provider value={{ size: '2em', className: 'mt-[5px] cursor-pointer' }}>
           <Link href="/blog/">
             <AiOutlineArrowLeft />
@@ -67,7 +67,7 @@ export default function PostPage({ frontmatter, content }: any) {
 
 
 
-      <div className='flex justify-between padmax:justify-center'>
+      <div className='flex-initial justify-between padmax:justify-center'>
 
         <div className='basis-[33%] padmax:hidden'>
           <div className='sticky top-[17%] apple text-black dark:text-white font-bold ml-[50px] 3xl:ml-0'>
@@ -88,7 +88,7 @@ export default function PostPage({ frontmatter, content }: any) {
 
         
 
-        <div className="prose xlmin:prose-2xl dark:prose-invert">
+        <div className="flex-initial prose xlmin:prose-2xl dark:prose-invert break-words">
           <ReactMarkdown
             className='basis-[41.6%] 3xl:basis-[77%] mt-8 '
             remarkPlugins={[remarkMath ,remarkGfm ]}
@@ -118,7 +118,7 @@ export default function PostPage({ frontmatter, content }: any) {
 
 
 
-        <div className='basis-[20.83%] 3xl:hidden'>
+        <div className='flex-initial basis-[20.83%] 3xl:hidden'>
           <div className='top-[20%] text-[2vw] apple font-bold text-center'>
             <div>
               {frontmatter.date}
