@@ -66,10 +66,10 @@ export default function PostPage({ frontmatter, content }: any) {
 
 
 
+      {/* flex-initial is necessery */}
+      <div className='padmax:flex-initial padmin:flex justify-between max1600:justify-center'>
 
-      <div className='flex-initial justify-between padmax:justify-center'>
-
-        <div className='basis-[33%] padmax:hidden'>
+        <div className='padmax:flex-initial basis-[33%] 2xl:hidden'>
           <div className='sticky top-[17%] apple text-black dark:text-white font-bold ml-[50px] 3xl:ml-0'>
             <div className=' text-[4vw] w-[60%] h-[520px] '>
               {frontmatter.title}
@@ -82,13 +82,9 @@ export default function PostPage({ frontmatter, content }: any) {
           </div>
         </div>
 
-        {/* <div className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} /> */}
-
-        {/* <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} className='basis-[41.6%] 3xl:basis-[77%] mt-8 prose xlmin:prose-2xl' /> */}
-
         
 
-        <div className="flex-initial prose xlmin:prose-2xl dark:prose-invert break-words">
+        <div className="padmax:flex-initial prose smmin:prose-2xl dark:prose-invert break-words">
           <ReactMarkdown
             className='basis-[41.6%] 3xl:basis-[77%] mt-8 '
             remarkPlugins={[remarkMath ,remarkGfm ]}
@@ -118,7 +114,7 @@ export default function PostPage({ frontmatter, content }: any) {
 
 
 
-        <div className='flex-initial basis-[20.83%] 3xl:hidden'>
+        <div className='padmax:flex-initial basis-[20.83%] 3xl:hidden'>
           <div className='top-[20%] text-[2vw] apple font-bold text-center'>
             <div>
               {frontmatter.date}
