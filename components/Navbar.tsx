@@ -54,7 +54,7 @@ export default function Navbar(props: any) {
     // backdrop-blur-sm
     // sticky top-0
     
-    <Disclosure as="nav" className="sticky top-0 colorchange z-[200] bg-white">
+    <Disclosure as="nav" className="sticky top-0 colorchange z-[200] bg-white dark:bg-[rgba(0,0,0,0.5)]">
       {({ open }) => (
         <>
           <div className="mx-auto px-2">
