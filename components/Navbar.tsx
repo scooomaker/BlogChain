@@ -85,7 +85,7 @@ export default function Navbar(props: any) {
                       as="a"
                       href={item.href}
                       className={classNames(
-                        'text-slate-500 navfunc uppercase text-[30px] font-thin pad:text-[25px]'
+                        'navfunc uppercase font-thin text-[25px] text pad:text-[20px] text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-200'
                       )}
                     // aria-current={item.current ? 'page' : undefined}
                     >
@@ -134,7 +134,7 @@ export default function Navbar(props: any) {
 
 
 
-
+          {/* map  */}
           <Disclosure.Panel className="absolute  lgmin:hidden">
             <div className="w-screen  space-y-3 z-auto h-fit  bg-stone-50  navmap ">
               {navigation.map((item) => (
