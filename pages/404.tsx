@@ -1,8 +1,17 @@
+import router from 'next/router'
 import React from 'react'
 
-function custom404() {
+function custom404(props:any) {
+  setTimeout(() => {
+    router.push('/')
+  },2500)
   return (
-    <div>404 Not Found</div>
+    <div className='flex font-bold text-center text-8xl h-screen'>
+
+      <div className='items-center my-auto mx-auto'>404 Not Found</div>
+      
+
+    </div>
   )
 }
 
