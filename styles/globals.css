@@ -109,8 +109,6 @@ main{
 
 body
 {
- 
-
   background-color: #fbfbfd;
 }
 
@@ -118,7 +116,9 @@ body
   transition: color 0.2s, background-color 0.2s;
 }
 
-
+section{
+  max-width: 1190px;
+}
 
 .card-img  {
   filter: brightness(1);
