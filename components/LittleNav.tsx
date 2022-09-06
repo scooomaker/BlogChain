@@ -33,13 +33,13 @@ function LittleNav() {
             </div>
           </div>
 
-          <div className='w-[30%] float-left'>
+          <div className='w-[24%] float-left'>
             &nbsp;
           </div>
 
 
           {/* add the navigation item */}
-          <div className="">
+          <div className="w-[76%]">
             {navigation.map((item) => (
               <>
                 <a

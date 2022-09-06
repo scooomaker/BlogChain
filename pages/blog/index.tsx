@@ -44,7 +44,7 @@ export default function Blog({ posts }: any) {
 
 
         {/* left lan  */}
-        <aside className="w-[24%] h-screen mt-[80px] pr-[360px]">
+        <aside className="w-[24%] h-screen mt-16 ">
           <div className=''>
             <div className='text-5xl font-bold apple'>{profile.name}</div>
             <p className='font-serif font-light text-[18px]'>{profile.id}</p>
