@@ -27,15 +27,19 @@ function LittleNav() {
         <section className="mx-auto">
 
 
-          <div className='w-[24%] float-left bg-blue-700 '>
-            <div className='w-48'>
-              <img className="rounded-full ring-white -translate-y-24 ring-4 shadow-2xl z-auto" src={profileImg} />
+          <div className='w-[24%] float-left relative'>
+            <div className='absolute -top-28'>
+              <img className="rounded-full ring-white w-48 ring-4 shadow-2xl z-auto" src={profileImg} />
             </div>
+          </div>
+
+          <div className='w-[30%] float-left'>
+            &nbsp;
           </div>
 
 
           {/* add the navigation item */}
-          <div className="bg-orange-400">
+          <div className="">
             {navigation.map((item) => (
               <>
                 <a
