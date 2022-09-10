@@ -28,7 +28,7 @@ function LittleNav() {
 
 
           <div className='w-[24%] float-left relative'>
-            <div className='absolute -top-28'>
+            <div className='absolute -top-28 ml-8'>
               <img className="rounded-full ring-white w-48 ring-4 shadow-2xl z-auto" src={profileImg} />
             </div>
           </div>
@@ -77,12 +77,13 @@ function LittleNav() {
 
 
       {/* mobile < 1280px (iphone and ipad) */}
-      <div className='xlmin:hidden h-auto'>
+      <div className='hidden h-auto'>
+      {/* <div className='xlmin:hidden h-auto'> */}
         {/* img  */}
         <div className='relative'>
           <div className='absolute  mobile:ml-8 mobile:-top-10 pad:ml-14 pad:-top-16 pc:ml-14 pc:-top-16'>
             <div className='mobile:w-[90px] pad:w-[120px] pc:w-[120px]'>
-              <Image src={profileImg} width={200} height={200} className="rounded-full   z-auto " />
+              <Image src={profileImg} width={200} height={200} className="rounded-full  z-auto " />
             </div>
           </div>
         </div>
