@@ -48,11 +48,35 @@
 
 
   .mainnav {
-    animation: MainNav 2s ;
+    animation: MainNav 7s ;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     /* transform: translateY(60px); */
   }
+
+
+  @keyframes BlogAni{
+    0%{
+      /* @apply invisible; */
+      /* transform:translateY(1000px); */
+      @apply h-[100vh]
+    }
+
+    100%{
+      /* @apply visible; */
+      /* transform:translateY(0); */
+      @apply h-[40vh]
+    }
+  }
+
+
+  .blogani {
+    animation: BlogAni 7s ;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /* transform: translateY(60px); */
+  }
+
 
 
   @keyframes pagefunc{
@@ -123,6 +147,28 @@
 
 
 
+ 
+
+  .typed-out {
+    /* white-space:nowrap; */
+    width: 15em; height: 1.12em;
+    border-right: 1px solid transparent;
+    animation: typing 3.5s steps(37, end) 1, blink-caret .75s step-end infinite;
+    font-family: Consolas, Monaco;
+    word-break: break-all;
+    overflow: hidden;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 15em; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: currentColor; }
+    }
+  
 
 }
 

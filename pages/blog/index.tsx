@@ -31,83 +31,104 @@ export async function getStaticProps() {
   };
 }
 
+const bgImg = 'https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg'
+
+
 export default function Blog({ posts }: any) {
+
+  // setTimeout(() => {
+  //   // animateNav.classList.add('hidden')
+  //   let animateNav = document.querySelector("main");
+  //   if (animateNav) {
+  //     animateNav.classList.add('mainnav')
+  //     console.log("succeed!")
+  //   }
+  // }, 2500)
+
   return (
-    <div className='bg-[#f5f8fa]'>
+    <>
+
+
       <Navbar name='blog' />
-      <BgImg />
-      <LittleNav />
+
+      {/* <BgImg /> */}
+      <div className='h-52 bg-cover bg-no-repeat bg-center blogani grid content-center justify-items-center' style={{ backgroundImage: `url(${bgImg})` }}>
+          <div className='typed-out z-auto text-white text-4xl'>雨月星辰,空间无限FengXiao's Blog</div>
+      </div>
+
+      <div className='bg-[#f5f8fa] '>
+        <LittleNav />
 
 
-      {/* > xl  */}
-      <section className="h-screen flex mx-auto z-0 py-3 px-7 bg-[#f5f8fa]">
+        {/* > xl  */}
+        <section className=" h-screen flex mx-auto z-0 py-3 px-7 bg-[#f5f8fa]">
 
 
-        {/* left lan  */}
-        <aside className="w-[24%] h-screen mt-14">
-          <div className='m-auto p-auto'>
-            <div className='text-5xl font-bold apple'>{profile.name}</div>
-            <p className='font-serif font-light text-[18px]'>{profile.id}</p>
-            <br />
-            <br />
-            <p className='apple break-words'>{profile.mail}</p>
+          {/* left lan  */}
+          <aside className="w-[24%] h-screen mt-14">
+            <div className='m-auto p-auto'>
+              <div className='text-5xl font-bold apple'>{profile.name}</div>
+              <p className='font-serif font-light text-[18px]'>{profile.id}</p>
+              <br />
+              <br />
+              <p className='apple break-words'>{profile.mail}</p>
 
-          </div>
-        </aside>
-
-
-        {/* center lan  */}
-        <div className="apple w-[45%] mt-14">
-          <div className='rounded-[6px] border-[1px] border-[#e1e8ed] bg-[#FFFFFF]'>
-
-
-
-            {posts.map(({ slug, frontmatter }: any) => (
-
-              <>
-                <div key={slug} className="px-7 py-6 ">
-                  <Link href={`/blog/${slug}`}>
-                    <div className=' cursor-pointer'>
-                      <div className='font-serif truncate text-[#657786]'>
-                        <span className='text-[14px]'>@scooo&nbsp;</span>
-                        <span className='text-[13px]'>{frontmatter.date}</span>
-                      </div>
-                      <h2 className='text-2xl truncate'>{frontmatter.title}</h2>
-                      <hr />
-                      <div className='text-sm  font-light px-2 pt-2  discript-text'>
-                        {frontmatter.descript}
-                      </div>
-
-                    </div>
-                  </Link>
-
-                </div>
-                <hr />
-              </>
-            ))}
-          </div>
-
-
-          
-        </div>
-
-
-        <aside className='apple w-[31%] mt-14 ml-3 px-3 text-[#5b5f6d]'>
-          <div className='m-auto p-auto '>
-            <div className='text-3xl font-medium '>Your Tweet activity</div>
-            <div className='font-light text-xl mt-6'>
-              Your Tweets earned 4,596 impressions over the last 28 days
             </div>
-            <div className='font-normal text-xl mt-6'>
-              View Your top Tweets
+          </aside>
+
+
+          {/* center lan  */}
+          <div className="apple w-[45%] mt-14">
+            <div className='rounded-[6px] border-[1px] border-[#e1e8ed] bg-[#FFFFFF]'>
+
+
+
+              {posts.map(({ slug, frontmatter }: any) => (
+
+                <>
+                  <div key={slug} className="px-7 py-6 ">
+                    <Link href={`/blog/${slug}`}>
+                      <div className=' cursor-pointer'>
+                        <div className='font-serif truncate text-[#657786]'>
+                          <span className='text-[14px]'>@scooo&nbsp;</span>
+                          <span className='text-[13px]'>{frontmatter.date}</span>
+                        </div>
+                        <h2 className='text-2xl truncate'>{frontmatter.title}</h2>
+                        <hr />
+                        <div className='text-sm  font-light px-2 pt-2  discript-text'>
+                          {frontmatter.descript}
+                        </div>
+
+                      </div>
+                    </Link>
+
+                  </div>
+                  <hr />
+                </>
+              ))}
             </div>
+
+
+
           </div>
-        </aside>
+
+
+          <aside className='apple w-[31%] mt-14 ml-3 px-3 text-[#5b5f6d]'>
+            <div className='m-auto p-auto '>
+              <div className='text-3xl font-medium '>Your Tweet activity</div>
+              <div className='font-light text-xl mt-6'>
+                Your Tweets earned 4,596 impressions over the last 28 days
+              </div>
+              <div className='font-normal text-xl mt-6'>
+                View Your top Tweets
+              </div>
+            </div>
+          </aside>
 
 
 
-      </section>
-      {/* > xl  */}
+        </section>
+        {/* > xl  */}
 
 
 
@@ -126,8 +147,8 @@ export default function Blog({ posts }: any) {
 
 
 
-      {/* < xl  */}
-      {/* <div className="xlmin:hidden space-y-7 h-screen">
+        {/* < xl  */}
+        {/* <div className="xlmin:hidden space-y-7 h-screen">
 
         {
           posts.map(({ slug, frontmatter }: any) => (
@@ -150,12 +171,13 @@ export default function Blog({ posts }: any) {
         }
 
       </div> */}
-      {/* < xl  */}
+        {/* < xl  */}
 
 
 
 
-    </div>
+      </div>
 
+    </>
   );
 }
