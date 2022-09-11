@@ -42,13 +42,14 @@ export default function Navbar(props: any) {
 
   // setTimeout(() => {
   //   // animateNav.classList.add('hidden')
-  //   let animateNav = document.querySelector("aside");
+  //   let animateNav = document.querySelector("nav");
   //   if (animateNav)
   //   {
-  //     animateNav.classList.add('hidden')
+  //     animateNav.classList.remove('hidden')
+  //     animateNav.classList.add('mainnav')
   //     console.log("succeed!")
   //     }
-  // }, 2000)
+  // }, 1000)
 
 
 
@@ -61,8 +62,10 @@ export default function Navbar(props: any) {
       {/* <div className='w-screen bg-blue-900 h-16 mainnav'>
         12345678987654
       </div> */}
+      {/* bg-white dark:bg-[rgba(0,0,0,0.5)] */}
 
-        <Disclosure as="nav" className="sticky top-0 colorchange z-[200] bg-white dark:bg-[rgba(0,0,0,0.5)] mainnav">
+
+        <Disclosure as="nav" className="backdrop-blur-sm  top-0 colorchange z-[200] mainnav absolute bg-white w-full">
           {({ open }) => (
             <>
               <div className="mx-auto px-2 ">

@@ -13,7 +13,10 @@ const Home: NextPage = () => {
     <>
       {/* <Navbar name='index' /> */}
       {/* <div id='nav'></div> */}
-      <Navbar name='index'/>
+
+        <Navbar name='index'/>
+    
+      
 
       <div className='flex h-screen'>
         <video autoPlay loop muted playsInline className='absolute w-full h-full object-cover z-0'>
