@@ -1,12 +1,11 @@
 import React from 'react'
-import { Disclosure } from '@headlessui/react'
 import Image from 'next/image'
 
 const navigation = [
-  { name: 'Tweets', href: '#', current: true },
-  { name: 'Following', href: '#', current: false },
-  { name: 'Followers', href: '#', current: false },
-  { name: 'Likes', href: '#', current: false },
+  { name: 'Blog', href: '#', current: true },
+  { name: 'Ins', href: '#', current: false },
+  { name: 'Life', href: '#', current: false },
+  { name: 'News', href: '#', current: false },
 
 ]
 
@@ -19,11 +18,13 @@ const profileImg = '/images/sea1.png'
 
 
 function LittleNav() {
+
+
   return (
     <>
 
       {/* Desktop > 1279px (pc and 4k) */}
-      <div className='bg-zinc-300 py-5'>
+      <div className='bg-zinc-300'>
         <section className="mx-auto">
 
 
@@ -39,14 +40,14 @@ function LittleNav() {
 
 
           {/* add the navigation item */}
-          <div className="w-[76%]">
+          <div className="w-[76%] py-4">
             {navigation.map((item) => (
               <>
                 <a
                   key={item.name}
                   href={item.href}
                   className={classNames(
-                    'apple px-4  rounded-md text-lg font-medium'
+                    'apple px-4 nav-menu text-lg font-medium py-4 hover:border-b-4 hover:border-[#7b878c]'
                   )}
                 >
                   {item.name}

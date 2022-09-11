@@ -1,7 +1,7 @@
 import router from 'next/router'
 import React from 'react'
 
-function custom404(props:any) {
+function custom404() {
   setTimeout(() => {
     router.push('/')
   },2500)
