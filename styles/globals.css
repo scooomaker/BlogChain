@@ -48,7 +48,7 @@
 
 
   .mainnav {
-    animation: MainNav 7s ;
+    animation: MainNav 2s ;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     /* transform: translateY(60px); */
