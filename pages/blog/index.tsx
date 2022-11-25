@@ -53,7 +53,7 @@ export default function Blog({ posts }: any) {
 
       {/* <BgImg /> */}
       <div className='h-52 bg-cover bg-no-repeat bg-center blogani grid content-center justify-items-center' style={{ backgroundImage: `url(${bgImg})` }}>
-          <div className='typed-out z-auto text-white text-4xl'>雨月星辰,空间无限FengXiao's Blog</div>
+          {/* <div className='typed-out z-auto text-white text-4xl'>雨月星辰,空间无限FengXiao's Blog</div> */}
       </div>
 
       <div className='bg-[#f5f8fa] '>
