@@ -33,7 +33,7 @@ const myfriends = [
     name: 'GUOREN',
     href: 'https://guorenjun.xyz/',
     img: 'https://pic.rmb.bdstatic.com/bjh/59a0860cceef75aaa60730346daf4d00.jpeg',
-    description: 'None'
+    description: ''
   },
 ]
 
