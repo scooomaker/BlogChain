@@ -86,7 +86,7 @@ function friends() {
                 <img src={MyProfile.img} alt={MyProfile.name} className='w-full h-full object-cover' />
               </div>
 
-              <div>
+              {/* <div>
                 <div className='p-4'>
                   <p className='text-4xl font-bold my-6'>{MyProfile.name}</p>
                   <p className='text-xl font-normal my-6'>{MyProfile.description}</p>
@@ -111,7 +111,7 @@ function friends() {
                   </Disclosure>
 
                 </div>
-              </div>
+              </div> */}
 
 
             </div>

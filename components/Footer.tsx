@@ -11,6 +11,7 @@ function Footer() {
         <div className='max-w-[1000px]  mx-auto px-7 justify-between flex sm:block sm:text-center'>
 
           <p>© 2022. All rights reserved by scooo.</p>
+          <p className='text-red-300'>Not yet completed</p>
           <ul className='flex space-x-5 sm:justify-center sm:pt-3'>
             <li>
 

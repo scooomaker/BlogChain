@@ -1,12 +1,11 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import BgImg from '../../components/BgImg';
 import LittleNav from '../../components/LittleNav';
 import Navbar from '../../components/Navbar';
 
 const profile = {
-  name: 'Feng Xiao', id: '@scooomaker',
+  name: 'scooo', id: '@scooomaker',
   mail: 'scooomaker@foxmail.com'
 };
 

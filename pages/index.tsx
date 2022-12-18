@@ -27,7 +27,7 @@ const Home: NextPage = () => {
 
         <div className="pages flex font-MrDafoe text-white z-10 pl-8  items-center select-none drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
         mobile:text-[60px] pad:text-[96px] pc:text-[128px] pc:pl-[90px] 4k:text-[140px] 4k:pl-[100px] dark:text-black">
-          <div className=''> Hi, I am scooo.</div>
+          <div className=''> BlogChain</div>
 
         </div>
       </div>
